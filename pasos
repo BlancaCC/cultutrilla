@@ -14,3 +14,15 @@ ssh // scritp maneja sabe que eres tú
 git diff diferencia
 git log // devuelve toda la historia de repositorio
 git commit -a // git add . + git commit
+
+//PARA SUBIR ARCHIVOS
+Recomendación hacer siempre git pull origin master
+origin: la dirección remota del repositorio (es una convención)
+master: rama principal
+
+1.-git remote add <nombre del remoto origin> <dirección (utiliza shh)>
+
+2.-git pull origin master
+2,5. resolución de conflictos (lo hace casi siempre automático CASI)
+3.-git push origin master
+
