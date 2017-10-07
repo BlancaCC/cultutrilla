@@ -1,0 +1,21 @@
+SITUACIONES DE PANTALLA
+C-v Avanzar una pantalla completa
+M-v Retroceder una pantalla completa
+C-l El cursor arriba, abajo o en el centro
+
+CURSOR
+C-P Línea anterior
+C-n Línea siguiente
+
+C-b una pocición atrás
+C-f una posición adelante
+
+M-f una palabra alante
+M-b una palabra atrás
+
+C-a retroceder al principio de una línea donde esté el cursor
+C-e avanzar al final de la línea donde esté el cursor
+
+M-a retroceder al principo de una oración
+M-e avanzar al final de una oración
+
