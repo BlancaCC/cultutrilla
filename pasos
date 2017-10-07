@@ -1,2 +1,16 @@
 cd <carpeta>
 git init // para iniciar un repositorio de git
+git add <archivo> // fase de almacenamiento
+Normalmente git add . //. es el directorio actual
+
+git commit -m "<título>" //si no quieres que te salga nano
+git commit // te sale el editor que tengas por defecto
+git clone <dirección repositorios; http...> // clonar repositorio
+
+//cómo subir cambios
+ssh // scritp maneja sabe que eres tú 
+
+
+git diff diferencia
+git log // devuelve toda la historia de repositorio
+git commit -a // git add . + git commit
