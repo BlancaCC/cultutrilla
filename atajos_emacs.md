@@ -42,8 +42,8 @@ c\-y pega el último texto borrado
 c \<DEL> borra el carácter anterio
 c\-d borra el carácter siguiente
 
-M-<DEL> Elimina la palabra inmediata antes del cursor
-M-d elimina la palabra inmediata después del cursor
+M\-<DEL> Elimina la palabra inmediata antes del cursor
+M\-d elimina la palabra inmediata después del cursor
 
 C-k Eliminal desde el cursor hasta el final de la línea
 M\-k Elimina hasta el final de la oració
