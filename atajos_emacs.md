@@ -46,10 +46,10 @@ M-<DEL> Elimina la palabra inmediata antes del cursor
 M-d elimina la palabra inmediata después del cursor
 
 C-k Eliminal desde el cursor hasta el final de la línea
-M-k Elimina hasta el final de la oració
+M\-k Elimina hasta el final de la oració
 
 C-SPC desde el cursos hasta donde estoy para seleccionar
-c-w para borrar lo seleccionado
+c\-w para borrar lo seleccionado
 
 ## INSTALAR PAQUETES 
 M-x list-packages RET (return) abre el sistema de paquetes de emacs, i para marcarlos, x para ejecutar la instalación
