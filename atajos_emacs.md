@@ -37,10 +37,10 @@ Espacio : para aceptar
 
 ## INSERTAR Y BORRAR
 C-u <entero> <caracter> inserta ese número de veces el caracter 
-c-y pega el último texto borrado
+c\-y pega el último texto borrado
 
-c <DEL> borra el carácter anterio
-c-d borra el carácter siguiente
+c \<DEL> borra el carácter anterio
+c\-d borra el carácter siguiente
 
 M-<DEL> Elimina la palabra inmediata antes del cursor
 M-d elimina la palabra inmediata después del cursor
