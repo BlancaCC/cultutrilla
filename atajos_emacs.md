@@ -63,6 +63,8 @@ C-SPC desde el cursos hasta donde estoy para seleccionar
 
 c\-w para borrar lo seleccionado
 
+M\-w para copiar sin borrar
+
 ## INSTALAR PAQUETES 
 M-x list-packages RET (return) abre el sistema de paquetes de emacs, i para marcarlos, x para ejecutar la instalación
 
