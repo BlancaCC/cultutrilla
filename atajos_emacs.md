@@ -68,3 +68,6 @@ M\-w para copiar sin borrar
 ## INSTALAR PAQUETES 
 M-x list-packages RET (return) abre el sistema de paquetes de emacs, i para marcarlos, x para ejecutar la instalación
 
+## Abril shell
+`M-x shell` este comando te abre la termianl desde emacs
+`c-x b <enter> ` este comando te al cierra 

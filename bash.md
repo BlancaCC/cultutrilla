@@ -137,7 +137,8 @@ s órdes, la salida de una es la entrada de la otra
 
 ## find y grep
 
-- **find** para buscar por la estructura de directorios los archivos quebcumplan con criterios especificados
+- **find** para buscar por la estructura de directorios los archivos quebcumplan con criterios especificados  
+  - ' find <directorio> -size <+- tamaño> ' busca archivos de un determinado tamaño, + si son mayores, - si son menor que	
 
 - **grep** permite buscar cadena en archivos
 
@@ -206,7 +207,7 @@ operador | descripción de resutado verdadero
 -a <archivo> | <archivo> existe
 -b <archivo> | <archivo> existe u es un dispositivo de bloques
 -c <archivo> | <archivo> existe y es un dispositvo de caracteres
--d <archivo> | <archivo> existe yy es un disposito de directorio
+-d <archivo> | <archivo> existe y es un disposito de directorio
 -e <archivo> | igual que -a
 -f <archivo> | existe y es un archo plano regular
 -G <archivo> | existe y es propiedad del grupo usuario
@@ -215,7 +216,7 @@ operador | descripción de resutado verdadero
 -O <archivo> | existe y es propieda del usuario
 -r <archivo> | existe y el usuario tiene permiso de lectura
 -s <archivo> | existe y no es vacío
--w <archivo> | existe y el ususrio tiene permiso de ecritura en él 
+-w <archivo> | existe y el usuario tiene permiso de ecritura en él 
 -x <archivo> | <archivo> existe y e ususrio tiene permiso de ejecución, o si es u directorio tiene permiso de búsqueda.
 <archivo> -nt <archivo2> | si el <archivo> es más nuevo o simplemente existe y el otro no
 <archivo> -ot <archivo2> | si <archivo> es más antiguo o no existe y el otro sí 
