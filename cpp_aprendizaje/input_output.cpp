@@ -54,17 +54,17 @@ cout << endl;
 cout << "Primer caráceter: " << ch << endl;
 
 cin.get(ch);
-cout<< "Segundo carácter" << ch << endl;
+cout<< "Segundo carácter: " << ch << endl;
 
 cin.putback(ch);
 cin.get(ch);
-cout  << "Segundo carácter" << ch << endl;
+cout  << "Segundo carácter: " << ch << endl;
 
 ch = cin.peek();
-cout << "Tercer carácter" << ch << endl;
+cout << "Tercer carácter: " << ch << endl;
 
 cin.get(ch);
-cout << "Tercer carácter" << ch << endl;
+cout << "Tercer carácter: " << ch << endl;
 
 return 0;
 }
