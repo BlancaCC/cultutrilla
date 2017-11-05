@@ -1,0 +1,1 @@
+ mensaje va a ser copiado en el fichero de entrada
