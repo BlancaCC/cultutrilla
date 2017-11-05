@@ -13,19 +13,19 @@ Conversión de tipos`static_cast<dataTypeName>(expresión) ` `static_cast<double
 `istreamVar.putback(ch)`                | Incluye último carárcter                       |   
 `ch = istreamVar.peek()`                | Devuelve el siguiente carácter sin quitarlo    |    
  `istreamVar.clear();`                  | Cuando hay un error de lectura, el<br>sitema ignora todos, esta función lo resaura    	 |`cin.clear()`                          
- ` getline(istreamVar , strVar) ` 	| Permite leer string que contengan espacios   	 | ` getline( cin , miString )
+ ` getline(istreamVar , strVar) ` 	| Permite leer string que contengan espacios   	 | ` getline( cin , miString )`
  
 [Código de ejemplo](https://github.com/BlancaCC/cultutrilla/blob/master/cpp_aprendizaje/ejemplosBasicos/input_output.cpp)
 
 #### File input/output
-     Lee y escribe en fichero. Pasos a segir:
-     1. Include en la cabecera la biblioteca `#include<fstream>`
-     2. Declara las variables que contendrán al fichero y su dirección `ifstream inData` si es de entrada y `oftream outData` si es de escritura
-     3. Abre los ficheros `filestreamVariable.open("sourceName")` ejemplo:` inData.open("disk:\\fichero.txt")`
-     4. Lee y escribe en los ficheros con los operadores `<<`(escritura) y `>>` (lectura).
-     5. Cierra los ficheros `nombre.close()`
+Lee y escribe en fichero. Pasos a segir:
+1. Include en la cabecera la biblioteca `#include<fstream>`
+2. Declara las variables que contendrán al fichero y su dirección `ifstream inData` si es de entrada y `oftream outData` si es de escritura
+3. Abre los ficheros `filestreamVariable.open("sourceName")` ejemplo:` inData.open("disk:\\fichero.txt")`
+4. Lee y escribe en los ficheros con los operadores `<<`(escritura) y `>>` (lectura).
+5. Cierra los ficheros `nombre.close()`
 
-[Ejemplo de trabajo con fichero y de getline] (https://github.com/BlancaCC/cultutrilla/blob/master/cpp_aprendizaje/ejemplosBasicos/fstream.cpp)
+[Ejemplo de trabajo con fichero y de getline](https://github.com/BlancaCC/cultutrilla/blob/master/cpp_aprendizaje/ejemplosBasicos/fstream.cpp)
 
 ### Output and formating output
 
