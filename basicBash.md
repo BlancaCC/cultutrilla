@@ -8,6 +8,7 @@
 - Cerrar una ventana que no sea la terminal `C-quit` y que no se haya abierto por medio de esa
 -`./ <programa> & ` lo ejecuta en "backgraund", dejando disponible la terminal
 - `xdg-open <archivo>` abre ese archivo con el programa predeterminado
+- `source <nombre_guión> ` ejecuta órdenes de un fichero en el shell actual, de esta manera se guardarían las variables dentro del shell  
 
  
 ## Comados relacionados con archivos y direcctorios
@@ -85,13 +86,15 @@ Quededan 10 semanas para fin año
 
 ## Variables  
 
-   Tipos			| Ejemplo o utiliadad
-   ---				| --- 
-   vectories o string		| ` num=(uno dos tres); echo ${num[*]}; uno dos tres`  
-   $BASH       			|  contiene la ruta de acceso del terminal
-   $HOME			| alamacena el directorio raís de la carpeta home
-   $PATH			| guarda el camino local de las órdenes
-    $? 				| contiene el código de retorno hacia la última orden o guión
+  Tipos			| Ejemplo o utiliadad
+  ---			| --- 
+  vectories o string	| ` num=(uno dos tres); echo ${num[*]}; uno dos tres`  
+  $BASH       		|  contiene la ruta de acceso del terminal
+  $HOME			| alamacena el directorio raís de la carpeta home
+  $PATH			| guarda el camino local de las órdenes
+  $? 			| contiene el código de retorno hacia la última orden o guión
+  --- 			| ---
+  
 
 
     Operaciones con varibles	| Utilidad 
@@ -121,6 +124,7 @@ Quededan 10 semanas para fin año
  `$#`		   | Número de argumentos que se le han pasado 
  `${arg:-val}`	   | Si el argumento es nulo se le asigna val  
  `${arg:?val }`	   | Si el argumento es no nulo le asigna ese valor  
+ `${!#}`     	   | Muestra el último argumento
 
 ## Operadores de consulta de archivos  
   Operador    	      | Función							 | Ejemplo  
@@ -140,4 +144,26 @@ else
 	<orden>
 fi
 ```
+
+### Orden for  
+Repite una secuencia, por ejemplo imaginemos que queremos contar del 1 hasta el 10
+ `for n in \`seq 1 1 10\` `  es equivalente también `for n in {1..10}` 
+Puedes trabajar también con otras órdenes `for i in $(ls)`
+
  
+### Depuración de programas  
+ - para activarlo, + para desactivarlo, 
+
+ Comando                  | Función 
+ --- 	     		  | --- 
+ `bash -n`  `set -n` 	  | Chequea errores sintácticos sin ejecutar una orden  
+ `bash -v`  `set -v`	  | Visualiza cada orden antes de ejecutarla
+ `bash -x`  `set -x`	  | Igual que -v pero con todas las sustituciones y expansiones realizadas
+
+#### Orden trap 
+Traza de cuando se ejecuta un programa, por ejemlo si lo llamásemos siempre con la misma orden, 
+colocar después del #!/bin/bash 
+trap <lo que quieras que haga tras cada ejecución de una línea> DEBUG
+DEBUG  es un tipo de señal, como también lo son EXIT , ERR ,  RETURN
+- EXIT cuando el código que se esté ejecutando finalice  
+- ERR cuando una orden devuelve un código de finalización distinto de 0

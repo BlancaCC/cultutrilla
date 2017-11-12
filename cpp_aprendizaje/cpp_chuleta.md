@@ -1,3 +1,7 @@
+## CHULETA DE LO QUE VOY APRENDIENDO SOBRE C++ ENTRE LOS LIBROS QUE CONSULTO Y LAS ASIGNATURAS DE INFORMÁTICA
+
+## Declaración de funciones
+- Declaración `inline`: sugiere al compilador que copie el código de la función y lo reemplaze por cada llamada a la función, si el código no es muy extenso, esto supondría una optimización.
 ## Conversión de datos 
 Conversión de tipos`static_cast<dataTypeName>(expresión) ` `static_cast<double>(25)`
 
@@ -75,10 +79,10 @@ Tipos de pasos de valores:
 - Paso por parámetro hace una copia `void funcion (int hola) `
 - Paso por **referencia** modifica el original `void funcion ( int& adios) `
 
-## Variables
+## Variables, namespace, stringtypes
 
 ### enum
-- Sirve para definir variables propias
+- Sirve para definir variables propias, empiezan a guardarse desde el 0, !!
 - Sintaxis: `enum nombre = { valor1 , valor2 , valor99999 }`
 
 #### Operaciones en enum
@@ -90,15 +94,15 @@ Ejemplo:
 ```cpp
 int ejmploEnum()
 {
-  enum Z2 = { cero , uno }; // declaro enum si fueran string se pondría sin ""
+  enum Z2 { cero , uno }; // declaro enum si fueran string se pondría sin ""
 
   Z2 a; // Declaro que a es un tipo de variable Z2
 
-  a = uno;
+  a = cero;
 
-  cout << " a vele:" << a << endl;
+  cout << " a vele:" << a << endl; //no escribirá la variable, sino la posición que ocupa en Z2
 
-  a = static_cast< Z2 >( a + 1);
+  a = static_cast< Z2 >( a + 1); //si sumas dos, no te dará error, pero carecerá de sentido ya que en Z2 no hay ningún otro elemento
 
     cout << " a vele:" << a << endl;
     
@@ -107,8 +111,43 @@ int ejmploEnum()
 
 ```
 
+### typedef
+- Crea un alias para una variable
+- sintaxix: `typedef variableExistene nuevoNombre`
+- ejemplo: `typedef int integer`
+
+### Namespace
+ Evita errores de sintaxis generados por dos variables que se llamen de la misma forma siendo uan global.
+ #### Sintaxis
+ ```cpp
+  // para declarar el namespace
+ namespace nombre_namespace 
+ {
+	miembros_del_namespace
+	
+ }
+
+// para hacer referencia al namespace
+nombre_namespace::identifcador
+
+// Para ahorrase escribise nombre_namespoace::identificador
+
+using namespace nombre_namespace; // incluye a todos los miembros
+using nombre_namespace::miembro ; // para incluir un miembro concreto
+
+```
+[Ejemplo del namespace más detallado](https://github.com/BlancaCC/cultutrilla/blob/master/cpp_aprendizaje/ejemplosBasicos/namespace.cpp)
+
+## Detecciones de errores
+
+ Función			|  Descripción			| Ejemplo
+ --- 				| --- 				| ---
+ `assert ( expr) `			| Si una expresión es 0 termina el programa con un mesaje de error <br>necesita de la biblioteca `assert.h`
+
 ## Bibliografía
 
  Libro								| Autor		| Apreciaciones
  --- 								| --- 		| ---
- *C++ programing: Program desing including data structures* 	| D.S. Malik 	| Bien ejemplificado, nivel muy básico
+ *C++ programing: Program desing including data structures* 	| D.S. Malik 	| Bien ejemplificado, nivel muy básico, recimendado como libro de iniciación
+ cpp reference	  	  	 	   			| A saber quién escribirá eso | Muy útil para consultas puntuales
+ 
