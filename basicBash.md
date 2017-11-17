@@ -19,6 +19,7 @@
  **awk**	   		 | escanea patrocenes y procesa lenguajes
  **ls**	 	    		 | lee los directorio
  **cd** 	     		 | cambia de directorio
+ **ln** 			 | Cra enlaces simbólicos
  **pwd**	      		 | Imprime el camino absulo del direcctorio actual   
  **mkdir** Y **rmdir**  	 | rmdir -r borra si tienes también archivos dentro  
  **cat**     			 | lee el condtenido de un archivo  
@@ -37,7 +38,8 @@
  `alias <nombre>='<ódener>' `	 | Definir comportamiento de una orden, sin argumentos, ves los alias creados,
  `unalias 		    	 | Borrar un alias
  `\alias`			 | Para ignorar un alias y ejecutar la orden original
- **printf ** 			 | muestra en el bash lo que se especifique  
+ **printf ** 			 | muestra en el bash lo que se especifique 
+ **sleep** <segundos>		 | Produce una pausa de los segundos introducidos como argumentos	 
  --- 	  			 | ---
 
 - código de formato para print 
@@ -93,7 +95,15 @@ Quededan 10 semanas para fin año
   $HOME			| alamacena el directorio raís de la carpeta home
   $PATH			| guarda el camino local de las órdenes
   $? 			| contiene el código de retorno hacia la última orden o guión
-  --- 			| ---
+
+*Si eres un profano en depuración lee el [apartado de depuración](#depuracion-de-programas)*
+ Variables de  depuración   |  **utilidad**  
+  --- 			    | ---
+  $LINENO   		    | representa el número de línea que está leyendo de un archivo
+  PS4			    | Variable empotrada que ajusta el valor de *xtrace* de la línea<br>`export PS4='+ línea $LINENO: ' `	
+  $FUNCNAME 		    | Array que contiene el nombre de todas las funciones que se ejecutan en el instante  
+  $BASH_ARGV 		    |  An  array  variable containing all of the parameters in the current bash execution call stack. 
+info bash y hartate información
   
 
 
@@ -150,6 +160,14 @@ Repite una secuencia, por ejemplo imaginemos que queremos contar del 1 hasta el 
  `for n in \`seq 1 1 10\` `  es equivalente también `for n in {1..10}` 
 Puedes trabajar también con otras órdenes `for i in $(ls)`
 
+O podemos hacer un bule for al estilo c  
+``` bash 
+for (( i=0 ; i<$2 ; i++ ))
+do
+    touch ficherito_del_amor_$i" :) "
+done;
+```
+
  
 ### Depuración de programas  
  - para activarlo, + para desactivarlo, 
@@ -161,9 +179,39 @@ Puedes trabajar también con otras órdenes `for i in $(ls)`
  `bash -x`  `set -x`	  | Igual que -v pero con todas las sustituciones y expansiones realizadas
 
 #### Orden trap 
-Traza de cuando se ejecuta un programa, por ejemlo si lo llamásemos siempre con la misma orden, 
+Traza,especifica una acción a reaizar cada vez que recive una señal (mecanismos de comunicación entre distintos procesos en linux <3) 
 colocar después del #!/bin/bash 
 trap <lo que quieras que haga tras cada ejecución de una línea> DEBUG
 DEBUG  es un tipo de señal, como también lo son EXIT , ERR ,  RETURN
 - EXIT cuando el código que se esté ejecutando finalice  
-- ERR cuando una orden devuelve un código de finalización distinto de 0
+- ERR cuando una orden devuelve un código de finalización distinto de 0  
+
+#### Función de aserción  
+Función que comprueba una variable o función en puntos críticos del guión.	
+
+### Control de trabajo en bash  
+
+- Función ejecutada en primer plano **foreground**  
+- Función en segundo plano **baskgroun** declarada con `&` al final de su declaración  
+
+órdenes para hacer referencia a un trabajo y así poder manipularlo: 
+Especificador  	     | Trabajo que es denotado con dicho especificador
+ --- 		     | ---
+%		     | Trabajo actual (%+ y %% son sinónimos de este especificador)
+%- 		     | Trabajo previo al actual
+%n 		     | Trabajo número n
+%<cadena> 	     | Trabajo cuya línea de órdenes comienza por <cadena>
+%?<cadena> 	     | Trabajo cuya línea de órdenes contiene <cadena>
+
+ órdenes más frecuentes de control de trabajos:
+Órdenes | Descripción
+ --- 	| ---
+jobs 	| Lista los trabajos activos bajo el control del usuario (help jobs)
+fg 	| Trae a primer plano un trabajo que se encuentra suspendido o en segundo plano (help fg)
+bg 	| Envía a segundo plano un trabajo (help bg)
+%	| Permite cambiar el estado de un trabajo (help %)
+wait 	| Espera la finalización de procesos en segundo plano (help wait)
+disown	| Suprime un trabajo de la lista de trabajos activos (help disown) `disown -r ` elimina los trabajos en ejecución `disown -a` todos los trabajos	
+kill 	| Envía una señal a un/os proceso/s. Por defecto, finaliza la ejecución de un proceso (man kill)
+ps 	| Muestra el estado de los procesos actuales en el sistema (man ps)
+top	| Muestra los procesos en ejecución con actualización de su información en tiempo real (man top)  
