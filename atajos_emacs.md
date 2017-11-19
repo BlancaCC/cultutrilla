@@ -38,7 +38,7 @@ Espacio : para aceptar
 
 ## INSERTAR Y BORRAR
 
- combinación		  | efecto
+ combinación		  | efecto  
  --- 			  | ---
  C-u <entero> <caracter>  | inserta ese número de veces el caracter   
  c\-y	      		  | pega el último texto borrado
@@ -56,19 +56,22 @@ Espacio : para aceptar
  `M% *string_a_reemplazar* <ENT> *string_nuevo* <ENT>`
 
 Se marcarán los que cumplan la condición.
-opciones dentro de copiar y reemplazar:  
+opciones dentro de copiar y reemplazar: 
+
  tecla 	      | utilidad
  --- 	      | ---
- <SPC> 	      | para reemplazar, otros también son 
- <DEL> 	      | obviar el siguiente
-  !	      | reemplazarlas todas 
+ `<SPC>`     | para reemplazar, otros también son 
+ `<DEL> `      | obviar el siguiente
+  `!	`   | reemplazarlas todas 
   ^	      | retroceder al maracado anterior
   . 	      | reemplazar el siguiente y salir del modo
   , 	      | muestra la situación actual del cursor, dejando de marcar el resto miestras se tenga pulsado
   n 	      | salir del modo  
 
 ## INSTALAR PAQUETES 
-M-x list-packages RET (return) abre el sistema de paquetes de emacs, i para marcarlos, x para ejecutar la instalación
+`M-x list-packages <ENT>` abre el sistema de paquetes de emacs, 
+`i`para marcarlos, 
+`x `para ejecutar la instalación
 
 ## Abril shell
 `M-x shell` este comando te abre la termianl desde emacs
