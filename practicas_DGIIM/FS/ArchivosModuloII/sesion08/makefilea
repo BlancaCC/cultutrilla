@@ -1,0 +1,2 @@
+progama1:
+	g++ -I ./include –o programa1 main.cpp hello.cpp factorial.cpp

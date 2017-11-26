@@ -1,0 +1,2 @@
+tan.o: tan.cpp
+       	g++ -I./includes -c tan.cpp

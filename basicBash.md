@@ -232,11 +232,57 @@ top	| Muestra los procesos en ejecución con actualización de su información e
  `g++ -o archivo.cpp`  	       	 | Realiza etapa de procesado y compilación generando módulo objeto si no hay error 
  `g++ archivo.o ach.o` 	       	 | Crea el ejutable, a.out 
  `g++ -o nom_ejecuta archivo.o`  | Igual que el anterior pero en vex de nombrar al archivo con a.out, lo nombra nom_ejecuta.out 
- `ar -rvs biblio.a modulo.o mod.o`| Genera una librería <br>genera un archivo .a <br>> r inserta los miembros del archivo, s crea índice, v amplia información en verbose   
-`$ g++ -L./ -o programa2 main2.o factorial.o hello.o -lmates` | crea ejecutable especificando las librerias con la raiz mates, esta se debe encontra en el direcorio  
+ `ar -rvs biblio.a modulo.o mod.o`| Genera una librería <br>genera un archivo .a <br>> r inserta los miembros del archivo, s crea índice, v amplia información en verbose 
+`g++ -I ACHIVO.CPP` 	    	 | Permite especificar archivos en los que la orden g++ busca en la cabecera, por defecto busca en *usr/include*<br> esta orden no tiene sentdo si todos los archivos se encuentra en el directorio donde se ejecutan las órdenes
+`$ g++ -L ./ -o programa2 main2.o factorial.o hello.o -lmates` | crea ejecutable especificando las librerias con la raiz mates, esta se debe encontra en el direcorio  
 `g++ -I./directorio -L./ -o programa2 main2.cpp factorial.cpp hello.cpp -lmates` | igual que la anterior pero especificando el directorio  
 
 
 ## Uso de archivos del tipo makefile  
 
 Makefile permite gestionar las depedencias, comprobando que archivos se han modificado desde la última vez que se ejecutó y vuelve a construir el ejecutable cambiando solo lás modificaciones.
+
+ Comando 	  	   | utilidad 
+ --- 		 	   | --- 
+`make -f NOMBRE_MAKEFILE`  | Especificación del archivo makefile, si es *makefileGNU*, *makefile* o *Makefile* se puede ejecutar `make` sin argumentos  
+
+### Estructura de un archivo makefile  
+Reglas para la estrcutura de un archivo makefile
+```
+objetivo: dependecias	
+TABULADOR orden1  
+TABULADOR orden2
+...
+
+```
+ lexema			| orden  
+ --- 			| ---
+ objetivo 		| nombre característico para la acción que ejecutará. Por ejjemplo el nombre de un archivo  
+dependencias 		| archivos u objetos (separadas en líneas en blanco) posteriores de los que depende nuesro programa<br>cuando se ejecuta la orden make se comprueba si estas dependencias han sido modificadas y en tal caso se ejecuta su lista de órdenes asociadas.  
+ordenes 		| conjunto de líneas de orden de shell que comienzan por tabulador, construyen objetos o realizan otras tareas  
+
+Ejemplo de makefile  
+```
+programa1: main.o factorial.o hello.o
+	   g++ -o programa1 main.o factorial.o hello.o
+main.o: main.cpp ./includes/functions.h
+	g++ -I./includes -c main.cpp
+factorial.o: factorial.cpp ./includes/functions.h
+	     g++ -I./includes -c factorial.cpp
+hello.o: hello.cpp ./includes/functions.h
+	 g++ -I./includes -c hello.cpp
+```  
+#### Reglas virtuales  
+Órdenes dentro de un archivo makefile que no genera ningún objeto pero que genera alguna acción dentro del proyecto de software. 
+Para utilizar esta orden es necesario especificarla cuando se llama a la orden makefile: 
+ejemplo:
+```bash 
+...
+...
+clear:          # nombre de mi regla virtual
+       rm *.o   # orden del shell que realiza
+```
+para llamarla desde el shell `make -f makefile clean`  
+
+Si existiera en el directorio un objeto que se llamara igual que la orden virtual, make consideraría que el objeto ya está creado y no ejecutaría la orden, para solucionarlo: 
+Ejecutar la orde especial `.POTHY: clean` todas las dependedias que contengan esta orden obviarán los ficheros con el mismo nombre y así se ejecutarán los comandos correspondientes

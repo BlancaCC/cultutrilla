@@ -1,0 +1,106 @@
+/*
+OPERACIONES REALES  
+Permite realizar operaciones con núemeros reales:
+- suma
+-resta 
+-representante canónico...
+Autora: Blanca Cano Camarero
+Última modificación: 25/11/17
+ */
+
+#include<iostream>
+#include <cmath>
+using namespace std;
+
+/**
+ * @brief: devueve el resultado de la suma de dos número reales  
+ * @param a: sumando
+ * @param b: sumando
+ * @return suma de los valores introducidos
+ */
+inline double suma( double a , double b );
+
+/**
+ *@brief: calcula el representante canónico  
+ *@param num: número a represenat canónicamente  
+ *@return void, imprime en pantalla el represetante canónico
+ */
+void canonico( double num );
+
+/**
+ * @brief: devuelve el número de decimales de un número real
+ * @param num: real del que determinar su numero de demiales  
+ * @return int, número de decimales que tiene num
+ */
+int decimales( double num);
+
+int main()
+{
+  int valor;
+  while (valor)
+    {
+      cout << "Qué desea hacer: \n"
+	   << "\t0) Cerrar este utilísimo programa"
+	   << "\n\t1) sumar"
+	   << "\n\t2) multiplicar"
+	   << "\n\t3) representante canónico"
+	   << endl << "Intruduzca número de la opción: ";
+      cin >> valor;
+      switch( valor )
+      {
+      case 1:
+	cout << "Introduzca los números que quiere sumar separados por un enter, si es 0 se sale:" << endl;
+	double numero, resultado;
+	resultado = 0;
+	while (numero)
+	  {
+	    cin >> numero;
+	    resultado = suma( resultado , numero);
+	    
+	  }
+	cout << "El resultado es " << resultado << endl;
+	break;
+
+      case 3: //representación canónica
+	cout << "Introduzca el número a representar en su forma canónica: ";
+	double num;
+	cin >> num;
+	cout << decimales ( num ) << endl ;
+	break;
+
+      }
+    }
+  return 0;
+ }
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ funciones ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+double suma ( double a , double b)
+{
+  return a + b;
+}
+
+void canonico ( double num)
+{
+  cout << " Su forma canónica es 0/0" << endl;
+}
+
+int decimales( double num )
+{
+  int num2 = int(10*num);
+  cout << "num " << num << " num2 " << num2 << endl;
+  int cnt = 1;
+  num *= 10;
+  
+  while ( abs(num -num2 ) > 0.00000000000001 && cnt < 15 ) //a partir de 15 me salen resultadoso disparatados 
+    {
+      num2 = int(10*num);
+      num *= 10;
+      cnt++;
+      if ( cnt < 20 )
+      cout << "num " << num << " num2 " << num2 << endl;
+    }
+  return cnt;
+}
+
+      
