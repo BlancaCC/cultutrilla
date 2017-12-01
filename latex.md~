@@ -1,9 +1,0 @@
-## LATEX PARA PRINCIPIANTES con auctex de emacs::heart::
->Puues sí ya era hora de ponerno finos con latex :)
-
-## Visualización del documento
-
- comando 	     | utilidad
- --- 		     | ---
- C-c C-a	     | Guarda, compila y visualiza el documento
- 

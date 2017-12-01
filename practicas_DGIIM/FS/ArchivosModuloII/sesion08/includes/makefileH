@@ -1,0 +1,51 @@
+```
+CC=g++
+CPPFLAGS=-Wall –I./includes
+SOURCE_MODULES=main.cpp factorial.cpp hello.cpp
+OBJECT_MODULES=$(SOURCE_MODULES:.cpp=.o)
+EXECUTABLE=programa1
+all: $(OBJECT_MODULES) $(EXECUTABLE)
+$(EXECUTABLE): $(OBJECT_MODULES)
+$(CC) $^ -o $@
+
+# Regla para obtener los archivos objeto .o que dependerán de los archivos .cpp
+# Aquí, $< y $@ tomarán valores respectivamente main.cpp y main.o y así sucesivamente
+.o: .cpp
+$(CC) $(CPPFLAGS) $< -o $@
+```
+ línea							| útil
+ ---							| ---
+`CC=g++ `						| compilador que usa
+`CPPFLAGS=-Wall –I./includes `				| abilita los  warming
+`SOURCE_MODULES=main.cpp factorial.cpp hello.cpp ` 	| Dependencias que utiliza
+`OBJECT_MODULES=$(SOURCE_MODULES:.cpp=.o)` 	 	| Módulos objeto que utiliza
+`EXECUTABLE=programa1 `					| Nombre del porgrama
+`all: $(OBJECT_MODULES) $(EXECUTABLE)`			| Se define regla *all* que hace referencia a todos módulos objetos y dependencias que utilizan
+`$(EXECUTABLE): $(OBJECT_MODULES)` 			| Definirá las dependencias del *programa1* y sus módulos ya mencionados en la variable *OBJECT_MODULES`
+`$(CC) $^ -o $@` 					| Compila el programa de cada uno de los llamados y utilizando todos las dependencias
+`.o: .cpp`						| Inicializa regla para todos los .o que dependen de las dependencias .cpp 
+
+### Ejercicio 8.10. Con la siguiente especificación de módulos escriba un archivo denominado makefilePolaca que automatice el proceso de compilación del programa final de acuerdo a la siguiente descripción:
+Compilador: gcc o g++
+Archivos cabecera: calc.h (ubicado en un subdirectorio denominado cabeceras)
+Archivos fuente: main.c stack.c getop.c getch.c
+Nombre del programa ejecutable: calculadoraPolaca
+Además, debe incluir una regla denominada borrar, sin dependencias, cuya funcionalidad sea la de eliminar los
+archivos objeto y el programa ejecutable.
+
+Código:
+```
+CC=g++
+LIB_DIR= ./cabeceras
+SOURCE_MODULES= main.c stack.c getop.c getch.c
+OBJECT_MODULES=$(SOURCES_MODULE:.c=.o)
+PROGRAM=calculadoraPolaca
+
+$(PROGRAM): $(OBJECT_MODULES)
+	$(CC) -L $(LIB_DIR) -c $^ $@ -calc.h
+.o: .cpp
+$(CC)  $< -o $@
+
+borrar:
+        rm $(SOURCE_MODULES) $(OBJECT_MODULES)
+```

@@ -1,4 +1,4 @@
-> Aquí encontrarás lo suficiente para que con un man seas la reina del mambo
+ > Aquí encontrarás lo suficiente para que con un man seas la reina del mambo
 
 
 ## Comandillos útiles para utilizar en terminal  
@@ -41,6 +41,7 @@
  **printf ** 			 | muestra en el bash lo que se especifique 
  **sleep** <segundos>		 | Produce una pausa de los segundos introducidos como argumentos	 
  --- 	  			 | ---
+ lpr 				 | Manda fiicheros a imprimir a la impresora configurada por defecto 
 
 - código de formato para print 
 ``` 
@@ -286,3 +287,45 @@ para llamarla desde el shell `make -f makefile clean`
 
 Si existiera en el directorio un objeto que se llamara igual que la orden virtual, make consideraría que el objeto ya está creado y no ejecutaría la orden, para solucionarlo: 
 Ejecutar la orde especial `.POTHY: clean` todas las dependedias que contengan esta orden obviarán los ficheros con el mismo nombre y así se ejecutarán los comandos correspondientes
+
+#### Variable predefinidas en el uso de make 
+
+`make -p` nos muestra las variable predefinidas, dejo las más interesantes 
+> Hay que hecharle un ratillo para leerlo enter y comprenderlo
+
+Variable  | Significado 
+--- 	  | --- 
+$@	  | Representa el nombre del objetivo de la regla en la que nos encontramos
+$<	  | Representa la primera dependencia de la regla en la que nos encontramos
+$?	  | Representa las dependencias de la presente regla que hayan sido actualizadas (modificadas) dentro del objetivo de la regla y separadas por un espacio en blanco
+$^	  | Representa todas las dependencias separadas por un espacio en blanco  
+
+Ejemplo clarificador 
+
+```  
+CC = g++					% Compilador	que vamos a utilizar
+CPPFLAGS = -Wall				% Opciones de compilado, -Wall para ver los warning 
+SRCS = main.cpp factorial.cpp hello.cpp
+OBJS = main.o factorial.o hello.o
+HDRS = functions.h  
+
+programa1: $(OBJS) 
+        $(CC) -o $@ $(OBJS)  % el valor de $@ se sustituirá por el de programa1  
+
+hello.o: hello.cpp 
+        $(CC) -c $(CPPFLAGS) $<  %el valos de $< hará referencia  a hello.cpp, la primera dependencia 
+
+print: $(SRCS)  
+        lpr -p $?            % represena las dependencias que hayan sido modificadas hasta la fecha
+
+
+programa1: $(OBJS)  
+        $(CC) -c $@ $^       % $^ representaría la secuencia  main.o factorial.o hello.o  
+```  
+Además se puede uno ahorra escribir de la siguiente manera `$(Nombre:TextoActual=TextoNuevo) `   
+Ejemplo:  
+```
+SRCS = main.cpp factorial.cpp hello.cpp  
+OBJS = $(SRCS:.cpp=.o)        		 % sería equivalente a main.o factorial.o hello.o 
+``` 
+
