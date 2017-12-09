@@ -35,13 +35,14 @@
  **wc**   			 | cuenta el número de algo de un fichero 
  chmod [ugoa][+-=][rwx]dir/file  | Cambio a los permisos de un archivo o direcctorio	 
  **echo** 			 | escribe un mensaje en termminal  
- `alias <nombre>='<ódener>' `	 | Definir comportamiento de una orden, sin argumentos, ves los alias creados,
+ `alias <nombre>='<ódener>' `	 | Definir comportamiento de una orden, sin argumentos, ves los alias creados
  `unalias 		    	 | Borrar un alias
  `\alias`			 | Para ignorar un alias y ejecutar la orden original
  **printf ** 			 | muestra en el bash lo que se especifique 
- **sleep** <segundos>		 | Produce una pausa de los segundos introducidos como argumentos	 
+ **sleep** <segundos>		 | Produce una pausa de los segundos introducidos como argumentos
+ **date ** 			 | Para saber la fecha en que estamos 
  --- 	  			 | ---
- lpr 				 | Manda fiicheros a imprimir a la impresora configurada por defecto 
+ lpr 				 | Manda ficheros a imprimir a la impresora configurada por defecto 
 
 - código de formato para print 
 ``` 
@@ -56,6 +57,9 @@
 ```bash
 blanca@debian:$printf "Quededan %i semanas para fin año \n" $( expr $DIFERENCIA / 7)
 Quededan 10 semanas para fin año 
+### Permanentes los alias  
+Los alias declaradas  por terminal son temporales,  se borrarán al cerrarla. Para hacerlos permanentes bastará con abrir ( en caso de no existir crear) el documento `.bashrc` que se encuentra en el direcctorio \home de su usuario y allí escribir el alias.
+Al guardar y salir del documento hacer un `. .bashrc` en la terminal  
 ```
  
  Comando			    | Utilidad					  | Ejemplo  
@@ -114,11 +118,11 @@ info bash y hartate información
     `declare -p <nombre>	| Ver el contenido de una variable  
     `export <variable>`		| para que el sistema la reconozca 
     \` orden \`			| Sustitución de orden como si guera un avariable  
-    `$(orede) `			| Sustitución de orden como si fuera una variable  
+    `$(orden) `			| Sustitución de orden como si fuera una variable  
     `expre <operación>`		| Permite operaciones con variables ```numero=`expr $numero + 1` ```
     ` $(( expresión )) `	| Evalua expresiones aritméticas y sustituye su valor, LOS ESPACIOS CUÍDAMELOS  
     ` $[ expresión ] ` 		| Evalua expresiones aritméticas y sustituye su valor
-    `operacioens | bc -l `	| Permite operaciones con decimales <3  
+    `operaciones | bc -l `	| Permite operaciones con decimales <3  
     `let varInt=asignación`	| Asigna valor a una variable entera SIN ESPACIO EN BLANCO `let a='a +   4'`  o `let a=a+4`
 
      
@@ -138,9 +142,20 @@ info bash y hartate información
  `${!#}`     	   | Muestra el último argumento
 
 ## Operadores de consulta de archivos  
+### test 
   Operador    	      | Función							 | Ejemplo  
   --- 	   	      | ---     						 | ---
   `test <expresión>`  | Comprobación de características de archivos y directorio | `test -x cat && echo “true” || echo “false”`  
+  
+#### Empresiones útiles  
+
+  orden 	 | funcion  
+  --- 		 | --- 
+  -d 		 | si existe y es un directorio 
+  -e 		 | si existe 
+  -f 		 | si existe y es un fichero de texto plano  
+
+> Para más información man test
 
 ### Orden if else 
 - con un 0 entra, con un 1 no.		 
