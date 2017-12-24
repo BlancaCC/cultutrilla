@@ -57,7 +57,8 @@
 ```bash
 blanca@debian:$printf "Quededan %i semanas para fin año \n" $( expr $DIFERENCIA / 7)
 Quededan 10 semanas para fin año 
-### Permanentes los alias  
+```
+### Alias permanentes 
 Los alias declaradas  por terminal son temporales,  se borrarán al cerrarla. Para hacerlos permanentes bastará con abrir ( en caso de no existir crear) el documento `.bashrc` que se encuentra en el direcctorio \home de su usuario y allí escribir el alias.
 Al guardar y salir del documento hacer un `. .bashrc` en la terminal  
 ```
