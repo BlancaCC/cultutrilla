@@ -2,7 +2,7 @@
 
 
 ## Comandillos útiles para utilizar en terminal  
--` C-l` limpiar terminal
+- ` C-l` limpiar terminal
 - `clear` limpiar terminal
 - Para cerrar al termial C-alt-w
 - Cerrar una ventana que no sea la terminal `C-quit` y que no se haya abierto por medio de esa
@@ -15,32 +15,32 @@
 
  COMANDOS                        | FUNCIONES
  ---		 		 | ---
- **tr**[option].., SET1 	 | traduce o borra caracteres :)
- **awk**	   		 | escanea patrocenes y procesa lenguajes
- **ls**	 	    		 | lee los directorio
- **cd** 	     		 | cambia de directorio
- **ln** 			 | Cra enlaces simbólicos
- **pwd**	      		 | Imprime el camino absulo del direcctorio actual   
- **mkdir** Y **rmdir**  	 | rmdir -r borra si tienes también archivos dentro  
- **cat**     			 | lee el condtenido de un archivo  
- **mv  /<archivo1> <archivo2>**  | mueve un archivo    
- **file** 	   		 | muestra el tipo de archivo.  
- **more** **pager**  **pg**  	 | visualiza un archivo fraccionándolo en la pantalla cada vez.  
- **rm**   	     		 | borra DEFINITIVAMENTE un archivo/directorio
- **touch**			 | modifica fecha y hora de un archivo, si no los crea  
- **clear** 			 | borra el contenido de la terminal actual
- **tail** -<entero> <archivo> 	 | muestra las líneas finales de un fichero  
- **head** -/<entero>/ <archivo>  | muestras las "numero de líneas iniciales de un fichero.  
- **sort** <archivo>   		 | ordena bajo un critero elegido las líneas de un archivo.  
- **wc**   			 | cuenta el número de algo de un fichero 
+ tr[option].., SET1 		 | traduce o borra caracteres :)
+ awk	   		 	 | escanea patrocenes y procesa lenguajes
+ ls	 	    		 | lee los directorio
+ cd 	     			 | cambia de directorio
+ ln			 	 | Crea enlaces simbólicos
+ pwd      		 	 | Imprime el camino absulo del direcctorio actual   
+ mkdir 	rmdir	  	 	 | rmdir -r borra si tienes también archivos dentro  
+ cat     			 | lee el condtenido de un archivo  
+ mv  /<archivo1> <archivo2>	 | mueve un archivo    
+ file 	   		 	 | muestra el tipo de archivo.  
+ more pager  pg  	 	 | visualiza un archivo fraccionándolo en la pantalla cada vez.  
+ rm   	     		         | borra DEFINITIVAMENTE un archivo/directorio
+ touch				 | modifica fecha y hora de un archivo, si no los crea  
+ clear	 			 | borra el contenido de la terminal actual
+ tail -<entero> <archivo> 	 | muestra las líneas finales de un fichero  
+ head -/<entero>/ <archivo>  	 | muestras las "numero de líneas iniciales de un fichero.  
+  sort <archivo>   		 | ordena bajo un critero elegido las líneas de un archivo.  
+ wc    				 | cuenta el número de algo de un fichero 
  chmod [ugoa][+-=][rwx]dir/file  | Cambio a los permisos de un archivo o direcctorio	 
- **echo** 			 | escribe un mensaje en termminal  
+  echo				 | escribe un mensaje en termminal  
  `alias <nombre>='<ódener>' `	 | Definir comportamiento de una orden, sin argumentos, ves los alias creados
  `unalias 		    	 | Borrar un alias
  `\alias`			 | Para ignorar un alias y ejecutar la orden original
- **printf ** 			 | muestra en el bash lo que se especifique 
- **sleep** <segundos>		 | Produce una pausa de los segundos introducidos como argumentos
- **date ** 			 | Para saber la fecha en que estamos 
+ printf  			 | muestra en el bash lo que se especifique 
+ sleep <segundos>		 | Produce una pausa de los segundos introducidos como argumentos
+  date  			 | Para saber la fecha en que estamos 
  --- 	  			 | ---
  lpr 				 | Manda ficheros a imprimir a la impresora configurada por defecto 
 
@@ -69,62 +69,66 @@ Al guardar y salir del documento hacer un `. .bashrc` en la terminal
 
 ## Metacarácteres
 
-   Metacarácter | Función								          | Ejemplo
-   --- 	     	| ---										  | ---
-   ?		| Caraceter simple en la posición que se indique				  | `tema?.pdf`
-   *		| Cualquier secuencia de 0 o más carácteres  					  | `tema* `
-   []		| Designan un carácter o rango de caracteres que representan un carácter simple	  | `tema[1-3].pdf`
-   {}		| Sustituyen conjuntos de palabras separadas por comas con  partes comunes	  | npi
-   ~		| Abrevia el campo absoluto del directorio home	       	    	   		  | `~\Documento`  
-   ---		| ---	     	   	    		   					  | ---
-   < nombre	| redireciciona la entrada de una orden obtenida del ARCHIVO nombre		  | `cat < text.txt`
-   > nombre	| Redirige la salida de una orden para que la escriba en el nuevo archivo nombre  | `echo "aaa" > text.txt `
-   &> nombre 	| La salida estándar se combina con la salida de error estándar estritas en nombre| idem
-   >> nombre	| Igual que *>* añadiendo al final del archivo si existe		    	  | idem
-   &>> nombre	| Igual que  “&>”, pero añadiendo las dos salidas combinadas al final del archivo | idem
-   2> nombre	| Igual que &>	   		      	  	  	     	      	  	  | idem
-   `| ` 	| Para crear cauces SÚPER ÚTIL							  | `cat text | grep -e ^[A-B]`
-   `|& `	| Cauce con errores 	  							  | similar  
-   --- 		| ---	    									  | ---
-   ;   		| Separador entre órdenes que se ejecutan					  | ` cat archivo ; echo "aaa"`
-   ()		| Aislar órdenes, siendo trada como una única					  | --
-   &&		| La orde siguiente se ejecuta si la anterior ha tenido éxito			  | aa
-   || 		| La orden siguiente se ejecuta sólo si la anterior no ha funcionadp		  | `ls -l notas || pwd`  
+ Metacarácter | Función								          | Ejemplo  
+ --- 	     	| ---										  | ---
+ ?		| Caraceter simple en la posición que se indique				  | `tema?.pdf`
+ \*	| Cualquier secuencia de 0 o más carácteres  					  | `tema* `
+ []		| Designan un carácter o rango de caracteres que representan un carácter simple	  | `tema[1-3].pdf`
+ {}		| Sustituyen conjuntos de palabras separadas por comas con  partes comunes	  | npi
+ ~		| Abrevia el campo absoluto del directorio home	       	    	   		  | `~\Documento`  
+ \< nombre	| redireciciona la entrada de una orden obtenida del ARCHIVO nombre		  | `cat < text.txt`
+ \> nombre	| Redirige la salida de una orden para que la escriba en el nuevo archivo nombre  | `echo "aaa" > text.txt `
+ &> nombre 	| La salida estándar se combina con la salida de error estándar estritas en nombre| idem
+ \>\> nombre	| Igual que *>* añadiendo al final del archivo si existe		    	  | idem
+ &\>\> nombre	| Igual que  “&>”, pero añadiendo las dos salidas combinadas al final del archivo | idem
+ 2> nombre	| Igual que &>	   		      	  	  	     	      	  	  | idem
+ `| ` 	| Para crear cauces SÚPER ÚTIL							  | `cat text | grep -e ^[A-B]`
+ `|& `	| Cauce con errores 	  							  | similar  
+ ;   		| Separador entre órdenes que se ejecutan					  | ` cat archivo ; echo "aaa"`
+ ()		| Aislar órdenes, siendo trada como una única					  | --
+ &&		| La orde siguiente se ejecuta si la anterior ha tenido éxito			  | aa
+ \|\| 		| La orden siguiente se ejecuta sólo si la anterior no ha funcionadp		  | `ls -l notas || pwd`  
 
 ## Variables  
+### Variables de paths
+Nombre			| Utiliadad
+---			| ---  
+$BASH       		|  contiene la ruta de acceso del terminal
+$HOME			| alamacena el directorio raís de la carpeta home
+$PATH			| guarda el camino local de las órdenes
+$? 			| contiene el código de retorno hacia la última orden o guión
 
-  Tipos			| Ejemplo o utiliadad
-  ---			| --- 
-  vectories o string	| ` num=(uno dos tres); echo ${num[*]}; uno dos tres`  
-  $BASH       		|  contiene la ruta de acceso del terminal
-  $HOME			| alamacena el directorio raís de la carpeta home
-  $PATH			| guarda el camino local de las órdenes
-  $? 			| contiene el código de retorno hacia la última orden o guión
+### vecotres o estring  
+Comando | utilidad | ejemplo 
+--- |--- |---
+` VECTOR=( ALGO ALGO ... )` | Para declarlos parenetesis con elementos separados por espacios |` num=(uno dos tres)`
+`$ {VECTOR[*]} ` ` ${VECTOR[@]} `    | Hacer referencia a todo el contenido                   | `echo ${num[*]}; uno dos tres` 
+`$ {#VECTOR[*]} ` ` ${#VECTOR[@]} `  | Devuelve la longitud del vector 			      | `echo ${#num[@]} ; 3 `
 
-*Si eres un profano en depuración lee el [apartado de depuración](#depuracion-de-programas)*
- Variables de  depuración   |  **utilidad**  
+*Si eres un profano en depuración lee el [apartado de depuración](#depuracion-de-programas)*  
+
+ Variables de  depuración  |  utilidad  
   --- 			    | ---
   $LINENO   		    | representa el número de línea que está leyendo de un archivo
-  PS4			    | Variable empotrada que ajusta el valor de *xtrace* de la línea<br>`export PS4='+ línea $LINENO: ' `	
+  PS4			    | Variable empotrada que ajusta el valor de *xtrace* de la línea<br>`export PS4='+ línea $LINENO: ' `
   $FUNCNAME 		    | Array que contiene el nombre de todas las funciones que se ejecutan en el instante  
   $BASH_ARGV 		    |  An  array  variable containing all of the parameters in the current bash execution call stack. 
 info bash y hartate información
   
 
 
-    Operaciones con varibles	| Utilidad 
-    ---		    		| ---
-    `declare -[i,s,a] <nombre>`	| declara variables 
-    `declare -p <nombre>	| Ver el contenido de una variable  
-    `export <variable>`		| para que el sistema la reconozca 
-    \` orden \`			| Sustitución de orden como si guera un avariable  
-    `$(orden) `			| Sustitución de orden como si fuera una variable  
-    `expre <operación>`		| Permite operaciones con variables ```numero=`expr $numero + 1` ```
-    ` $(( expresión )) `	| Evalua expresiones aritméticas y sustituye su valor, LOS ESPACIOS CUÍDAMELOS  
-    ` $[ expresión ] ` 		| Evalua expresiones aritméticas y sustituye su valor
-    `operaciones | bc -l `	| Permite operaciones con decimales <3  
-    `let varInt=asignación`	| Asigna valor a una variable entera SIN ESPACIO EN BLANCO `let a='a +   4'`  o `let a=a+4`
-
+  Operaciones con varibles	| Utilidad 
+  ---		    		| ---
+  `declare -[i,s,a] <nombre>`	| declara variables 
+  `declare -p <nombre>	| Ver el contenido de una variable  
+  `export <variable>`		| para que el sistema la reconozca 
+  \` orden \`			| Sustitución de orden como si guera un avariable  
+  `$(orden) `			| Sustitución de orden como si fuera una variable  
+  `expre <operación>`		| Permite operaciones con variables ```numero=`expr $numero + 1` ```
+  ` $(( expresión )) `	| Evalua expresiones aritméticas y sustituye su valor, LOS ESPACIOS CUÍDAMELOS  
+  ` $[ expresión ] ` 		| Evalua expresiones aritméticas y sustituye su valor
+  `operaciones | bc -l `	| Permite operaciones con decimales <3  
+  `let varInt=asignación`	| Asigna valor a una variable entera SIN ESPACIO EN BLANCO `let a='a +   4'`  o `let a=a+4`
      
 ## Guiones 
 1. Comenzar con `#!/bin/bash` 
@@ -183,7 +187,14 @@ do
     touch ficherito_del_amor_$i" :) "
 done;
 ```
-
+### Bucle infino con while
+```
+while:
+do 
+	echo "Qu bonita es la vida"
+done
+	
+```
  
 ### Depuración de programas  
  - para activarlo, + para desactivarlo, 
@@ -196,11 +207,11 @@ done;
 
 #### Orden trap 
 Traza,especifica una acción a reaizar cada vez que recive una señal (mecanismos de comunicación entre distintos procesos en linux <3) 
-colocar después del #!/bin/bash 
-trap <lo que quieras que haga tras cada ejecución de una línea> DEBUG
-DEBUG  es un tipo de señal, como también lo son EXIT , ERR ,  RETURN
-- EXIT cuando el código que se esté ejecutando finalice  
-- ERR cuando una orden devuelve un código de finalización distinto de 0  
+colocar después del #!/bin/bash   
+trap <lo que quieras que haga tras cada ejecución de una línea> DEBUG  
+DEBUG  es un tipo de señal, como también lo son EXIT , ERR ,  RETURN  
+- EXIT cuando el código que se esté ejecutando finalice   
+- ERR cuando una orden devuelve un código de finalización distinto de 0     
 
 #### Función de aserción  
 Función que comprueba una variable o función en puntos críticos del guión.	
@@ -208,9 +219,10 @@ Función que comprueba una variable o función en puntos críticos del guión.
 ### Control de trabajo en bash  
 
 - Función ejecutada en primer plano **foreground**  
-- Función en segundo plano **baskgroun** declarada con `&` al final de su declaración  
+- Función en segundo plano **baskground** declarada con `&` al final de su declaración  
 
 órdenes para hacer referencia a un trabajo y así poder manipularlo: 
+
 Especificador  	     | Trabajo que es denotado con dicho especificador
  --- 		     | ---
 %		     | Trabajo actual (%+ y %% son sinónimos de este especificador)
@@ -219,7 +231,8 @@ Especificador  	     | Trabajo que es denotado con dicho especificador
 %<cadena> 	     | Trabajo cuya línea de órdenes comienza por <cadena>
 %?<cadena> 	     | Trabajo cuya línea de órdenes contiene <cadena>
 
- órdenes más frecuentes de control de trabajos:
+ órdenes más frecuentes de control de trabajos:   
+ 
 Órdenes | Descripción
  --- 	| ---
 jobs 	| Lista los trabajos activos bajo el control del usuario (help jobs)
@@ -273,7 +286,7 @@ TABULADOR orden2
 ```
  lexema			| orden  
  --- 			| ---
- objetivo 		| nombre característico para la acción que ejecutará. Por ejjemplo el nombre de un archivo  
+objetivo 		| nombre característico para la acción que ejecutará. Por ejjemplo el nombre de un archivo  
 dependencias 		| archivos u objetos (separadas en líneas en blanco) posteriores de los que depende nuesro programa<br>cuando se ejecuta la orden make se comprueba si estas dependencias han sido modificadas y en tal caso se ejecuta su lista de órdenes asociadas.  
 ordenes 		| conjunto de líneas de orden de shell que comienzan por tabulador, construyen objetos o realizan otras tareas  
 
