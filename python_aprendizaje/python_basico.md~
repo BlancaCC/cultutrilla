@@ -1,0 +1,21 @@
+## Python básico
+
+### Nociones básicas
+- Python separa un bloque de otro por el indexado *OJO CON EL INDEXADO*
+- Python es un lenguaje de datos no tipado ( no hay que definir el tipo de dato que se va a utilizar )
+
+### Estructuras de flujo de datos
+
+#### if , elif y else
+```python
+if numero < 10 :
+   print(" El número es menor que 10")
+
+elif numero > 20:
+     print("El número es mayor que 20")
+
+else :
+     print("El núemro está entre medias")
+
+
+

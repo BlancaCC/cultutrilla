@@ -1,0 +1,141 @@
+BLANCA CANO CAMARERO 
+GRUPO 1 DGIIM
+5/10/17 
+
+EJERCICIO 4.1
+blanca@debian:~/Documentos/FS/prácticas$ A=1;B=2;C=3;D=D;MENSAJE="esto es un mensaje"
+
+EJERCICIO 4.2
+Al intertar visualizarlo de nuevo tras la orden bash, el contenido de la variable NOMBRE se borra, la solución es exportar la variable con la orden " export NOMBRE "
+
+EJERCICIO 4.3
+Si la variable la pongo fuera del mensaje me lo escribe todo en una línea.
+
+Si sustituyo las comillas dobles por simples, me lo considera todo un avariable y por ende aparece el mensaje literal.
+
+EJERCICIO 4.4
+Ha aparecido un +1 en la patalla
+
+EJERCICIO 4.5 
+blanca@debian:~$ ./saluda Blanca
+Hola Blanca 
+
+Guión: 
+#! /bin/bash
+nombre=$1
+printf "Hola $nombre \n"
+
+EJERCICIO 4.6
+blanca@debian:~$ ./saluda Blanca cano
+Hola Blanca cano 
+
+Guión:
+blanca@debian:~$ cat saluda 
+#! /bin/bash
+nombre=$*
+printf "Hola $nombre \n"
+
+EJERCICIO 4.7
+
+blanca@debian:~/Documentos/FS/prácticas$ VAR1="hola";VAR2="adios";VAR3="14"
+
+a) 
+blanca@debian:~/Documentos/FS/prácticas$ printf "%15s %15s %15d\n" $VAR1 $VAR2 $VAR3
+           hola           adios    
+b)
+Son locales
+
+C)
+blanca@debian:~/Documentos/FS/prácticas$ unset VAR2
+
+D)NO: blanca@debian:~$ echo $VAR1
+
+como se ve no te imprime nada
+
+e)
+blanca@debian:~/Documentos/FS/prácticas$ vector=($VAR1 $VAR2 $VAR3)
+
+f)
+blanca@debian:~/Documentos/FS/prácticas$ echo ${vector[1]}
+14
+
+EJERCICIO 4.8
+
+blanca@debian:~/Documentos/FS/prácticas$ alias ne=' ls -A | wc -l'
+blanca@debian:~/Documentos/FS/prácticas$ ne
+4
+Para hacerlo para la carpeta home:
+blanca@debian:~/Documentos/FS/prácticas$ alias ne='ls -A ~ | wc -l'
+
+EJERCICIO 4.9
+blanca@debian:~/Documentos/FS/prácticas$ find ~ -size -1 > archivosP
+
+EJERCICIO 4.10
+blanca@debian:~/Documentos/FS/prácticas$ find . -name "*ejemplo*"
+
+EJERCICCIO 4.11
+
+	FIND:
+find - search for files in a directory hierarchy
+
+synopsis:
+       find [-H] [-L] [-P] [-D debugopts] [-Olevel] [path...] [expression]
+    
+option:
+	-daystart
+              Measure times  (for  -amin,  -atime,  -cmin, -ctime, -mmin, and -mtime) from the beginning of today rather than  from  24  hours ago.  
+              -amin n -anewer FILE -atime n -cmin n -cmin n -empty
+              -executable ...
+              
+       GREP:
+       ‘grep’ prints lines that contain a match for a pattern.
+       
+Synopsis
+	grep [OPTIONS] PATTERN [FILE...]
+       grep [OPTIONS] [-e PATTERN | -f FILE] [FILE...]
+Option
+	  Matcher Selection
+       -E, --extended-regexp
+              Interpret  PATTERN as an extended regular expression (ERE, see below).
+              (-E is specified by POSIX.)
+
+       -F, --fixed-strings
+              Interpret PATTERN as a list of  fixed  strings  (rather  than  regular
+              expressions),  separated  by  newlines, any of which is to be matched.
+              
+              (-F is specified by POSIX.)
+ -f FILE, --file=FILE
+              Obtain patterns from FILE, one per line.  The empty file contains zero
+              patterns, and therefore matches nothing.  (-f is specified by POSIX.
+                -w, --word-regexp
+              Select only those lines containing matches that form whole words.  The
+              test is that the matching substring must either be at the beginning of
+              the line, or preceded by a non-word constituent character.  Similarly,
+              it  must  be  either  at the end of the line or followed by a non-word
+
+
+EJERCICIO 4.12
+blanca@debian:~$ cat /etc/passwd | cut -d: -f1 | grep USUARIO_A_BUSCAR
+
+EJERCICIO 4.13
+blanca@debian:~/Documentos/FS/prácticas$ ls -l ~ |cut -d " " -f |grep-e'-[-w][-x]$'| wc -l
+
+EJERCICIO 4.14
+
+blanca@debian:~/Documentos/FS/prácticas$ ./numE entregadas
+2
+
+contenido guión:
+#!/bin/bash
+
+ls -A $1 | wc -l
+
+
+
+
+
+           
+
+
+
+

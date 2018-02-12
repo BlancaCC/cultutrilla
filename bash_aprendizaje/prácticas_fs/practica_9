@@ -108,4 +108,93 @@ disassemble para ver el código ensamblador
 
 ### Ejercicio 9.5. Considerando la depuración de los ejercicios anteriores, elimine todos los puntos de ruptura salvo el primero.
 
-`(gdb) delete breakpoints 2 3 4 `
+`(gdb) delete breakpoints 2 3 4 `  
+
+### Ejercicio 9.6 
+break 15
+break 29
+break 42
+break 47
+run
+display final1
+display final2
+continue
+display final1
+display final2
+
+
+La función vale 100 veces la variable cuenta que se incrementa en dos cada turno
+
+
+Ejercicio 9.6
+
+Faltaba guardar el valor en variable en temp.
+La sumatoria debe ser hasta 15  
+
+Ejercicio 9.8  
+Next ejecuta la siguiente linea del programa si es una función la ejecuta entera y no entra en ella.
+
+step como next, pero si es una función entra en ella.
+
+Ejercicio 9.9
+
+Starting program: /home/blancacano/Escritorio/hoy/ArchivosModuloII/sesion09/ejemplo10 
+
+Breakpoint 1, cuenta (y=0) at mainsesion09b.cpp:13
+13	   tmp = y + 2; 
+(gdb) info frame
+Stack level 0, frame at 0x7fffffffe600:
+ rip = 0x4007bd in cuenta (mainsesion09b.cpp:13); saved rip = 0x40082d
+ called by frame at 0x7fffffffe620
+ source language c++.
+ Arglist at 0x7fffffffe5f0, args: y=0
+ Locals at 0x7fffffffe5f0, Previous frame's sp is 0x7fffffffe600
+ Saved registers:
+  rbp at 0x7fffffffe5f0, rip at 0x7fffffffe5f8
+(gdb) up
+#1  0x000000000040082d in main () at mainsesion09b.cpp:48
+48	      final2 = cuenta(i);
+(gdb) info frame
+Stack level 1, frame at 0x7fffffffe620:
+ rip = 0x40082d in main (mainsesion09b.cpp:48); saved rip = 0x7ffff76ab830
+ caller of frame at 0x7fffffffe600
+ source language c++.
+ Arglist at 0x7fffffffe610, args: 
+ Locals at 0x7fffffffe610, Previous frame's sp is 0x7fffffffe620
+ Saved registers:
+  rbp at 0x7fffffffe610, rip at 0x7fffffffe618
+(gdb) down
+#0  cuenta (y=0) at mainsesion09b.cpp:13
+13	   tmp = y + 2; 
+(gdb) info frame
+Stack level 0, frame at 0x7fffffffe600:
+ rip = 0x4007bd in cuenta (mainsesion09b.cpp:13); saved rip = 0x40082d
+ called by frame at 0x7fffffffe620
+ source language c++.
+ Arglist at 0x7fffffffe5f0, args: y=0
+ Locals at 0x7fffffffe5f0, Previous frame's sp is 0x7fffffffe600
+ Saved registers:
+  rbp at 0x7fffffffe5f0, rip at 0x7fffffffe5f8
+
+### Ejercicio 9.10  
+(gdb) break 30 if final == 8
+Punto de interrupción 1 at 0x4007eb: file mainsesion09b.cpp, line 30.
+
+No se para nunca, ya que nunca alcanza el valor 8  
+
+### Ejercicio 9.11  
+El valor de tmp no depende de los anteriores ya que ya que tmp es una variable interna y que np depende de su valor pasado
+
+### Ejercicio 9.12 
+ejecuto el grograma lo paro con attch
+abro otra termianl y lo despuro desde allí.
+para terminar el programa hago kill de este.  
+
+### Ejercicio 9.13  
+
+
+
+
+
+
+

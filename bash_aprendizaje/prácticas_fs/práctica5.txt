@@ -1,0 +1,308 @@
+PRÁCTICA 5
+BLANCA CANO CAMARERO
+19/10/17
+
+Ejercicio 5.1: Utilizando una variable que contenga el valor entero 365 y otra que guarde el número del día actual
+del año en curso, realice la misma operación del ejemplo anterior usando cada una de las diversas formas de
+cálculo comentadas hasta el momento, es decir, utilizando expr, $(( ... )) y $[ ... ].
+
+Forma con expr:
+
+blanca@debian:~/Documentos/FS/prácticas$ YEAR=365
+blanca@debian:~/Documentos/FS/prácticas$ DIA=$(date +%j)
+blanca@debian:~/Documentos/FS/prácticas$ DIFERENCIA=$(expr $YEAR - $DIA)
+blanca@debian:~/Documentos/FS/prácticas$ printf "Quededan %i semanas para fin año \n" $( expr $DIFERENCIA / 7)
+Quededan 10 semanas para fin año 
+
+Forma con $( () ):
+ blanca@debian:~/Documentos/FS/prácticas$ printf " Faltan %i semanas para fin de curso \n" $((($YEAR-$DIA)/7))
+ Faltan 10 semanas para fin de curso
+
+Forma con $[]:
+blanca@debian:~/Documentos/FS/prácticas$ printf " Faltan %i semanas para fin de curso \n" $[($YEAR-$DIA)/7]
+ Faltan 10 semanas para fin de curso 
+
+
+Ejercicio 5.3: Utilizando el operador de división, ponga un caso concreto donde se aprecie que la asignación
+abreviada es equivalente a la asignación completa, es decir, que x/=y equivale a x=x/y.
+
+blanca@debian:~$ X=77
+blanca@debian:~$ Y=11
+blanca@debian:~$ echo $[X /= $Y]
+7
+blanca@debian:~$ echo $X
+7
+blanca@debian:~$ X=77
+blanca@debian:~$ Y=11
+blanca@debian:~$ echo $[X = $X / $Y]
+7
+blanca@debian:~$ echo $X
+7
+
+
+Ejercicio 5.4: Compruebe qué ocurre si en el ejemplo anterior utiliza comillas dobles o simples para acotar todo lo
+que sigue a la orden echo. ¿Qué sucede si se acota entre comillas dobles solamente la expresión aritmética que se
+quiere calcular?, ¿y si se usan comillas simples?
+
+blanca@debian:~/Documentos/FS/prácticas$ echo  '10/3' |bc -l
+3.33333333333333333333
+blanca@debian:~/Documentos/FS/prácticas$ echo  "10/3" |bc -l
+3.33333333333333333333
+
+Ejercicio 5.5: Calcule con decimales el resultado de la expresión aritmética (3-2)/5. Escriba todas las
+expresiones que haya probado hasta dar con una respuesta válida. Utilizando una solución válida, compruebe qué
+sucede cuando la expresión aritmética se acota entre comillas dobles; ¿qué ocurre si se usan comillas simples?, ¿y
+si se ponen apóstrofos inversos?
+
+blanca@debian:~/Documentos/FS/prácticas$ echo  (3 - 2) / 5 |bc -l
+bash: error sintáctico cerca del elemento inesperado `3'
+blanca@debian:~/Documentos/FS/prácticas$ echo  "(3 - 2) / 5" |bc -l
+.20000000000000000000
+blanca@debian:~/Documentos/FS/prácticas$ echo  "(3 - 2) / 5" |bc -l
+.20000000000000000000
+blanca@debian:~/Documentos/FS/prácticas$ echo  '(3 - 2) / 5' |bc -l
+.20000000000000000000
+blanca@debian:~/Documentos/FS/prácticas$ echo  `(3 - 2) / 5` |bc -l
+bash: command substitution: línea 1: error sintáctico cerca del elemento inesperado `/'
+bash: command substitution: línea 1: `(3 - 2) / 5'
+
+
+
+Ejercicio 5.6: Consulte la sintaxis completa de la orden let utilizando la orden de ayuda para las órdenes
+empotradas (help let) y tome nota de su sintaxis general.
+let: let arg [arg ...]
+    Evalúa expresiones aritméticas.
+    
+    Evalúa cada ARG como una expresión aritmética.  La evaluación se hace
+    con enteros de longitud fija, sin revisar desbordamientos, aunque la
+    la división por 0 se captura y se marca como un error.  La siguiente
+    lista de operadores está agrupada en niveles de operadores de la misma
+    prioridad.  Se muestran los niveles en orden de prioridad decreciente.
+    
+    	id++, id--	post-incremento, post-decremento de variable
+    	++id, --id	pre-incremento, pre-decremento de variable
+    	-, +		menos, más unario
+    	!, ~		negación lógica y basada en bits
+    	**		exponenciación
+    	*, /, %		multiplicación, división, residuo
+    	+, -		adición, sustracción
+    	<<, >>		desplazamientos de bits izquierdo y derecho
+    	<=, >=, <, >	comparación
+    	==, !=		equivalencia, inequivalencia
+    	&		AND de bits
+    	^		XOR de bits
+    	|		OR de bits
+    	&&		AND lógico
+    	||		OR lógico
+    	expr ? expr : expr
+    			operador condicional
+    	=, *=, /=, %=,
+    	+=, -=, <<=, >>=,
+    	&=, ^=, |=	asignación
+
+Ejercicio 5.7: Al realizar el ejercicio anterior habrá observado que la orden let admite asignaciones múltiples y
+operadores que nosotros no hemos mencionado anteriormente. Ponga un ejemplo de asignación múltiple y, por
+otra parte, copie en un archivo el orden en el que se evalúan los operadores que admite.
+
+PENDIENTE
+
+Ejercicio 5.8: Haciendo uso de las órdenes conocidas hasta el momento, construya un guión que admita dos
+parámetros, que compare por separado si el primer parámetro que se le pasa es igual al segundo, o es menor, o es
+mayor, y que informe tanto del valor de cada uno de los parámetros como del resultado de cada una de las
+evaluaciones mostrando un 0 o un 1 según corresponda.
+
+ blanca@debian:~/Documentos/FS/prácticas$ ./g58 12 2
+menor 0 
+mayor 1 
+igual 0 
+blanca@debian:~/Documentos/FS/prácticas$ ./g58 12 12
+menor 0 
+mayor 0 
+igual 1 
+blanca@debian:~/Documentos/FS/prácticas$ ./g58 2 12
+menor 1 
+mayor 0 
+igual 0 
+
+
+
+Guión g58 escrito:
+#!/bin/bash
+
+X=$1
+Y=$2
+printf "menor %i \n"  $[$1< $2];
+printf "mayor %i \n" $[X>Y];
+printf "igual %i \n" $[$X==$Y];
+
+Ejercicio 5.9: Usando test, construya un guion que admita como parámetro un nombre de archivo y realice las
+siguientes acciones: asignar a una variable el resultado de comprobar si el archivo dado como parámetro es plano
+y tiene permiso de ejecución sobre él; asignar a otra variable el resultado de comprobar si el archivo es un enlace
+simbólico; mostrar el valor de las dos variables anteriores con un mensaje que aclare su significado. Pruebe el
+guion ejecutándolo con /bin/cat y también con /bin/rnano.
+
+- Prueba:
+'''blanca@debian:~/Documentos/FS/prácticas$ ./g59 /bin/cat
+Plano y con permiso de ejecución: true 
+Enlace simbólico: false 
+blanca@debian:~/Documentos/FS/prácticas$ ./g59 /bin/rnano 
+Plano y con permiso de ejecución: true 
+Enlace simbólico: true
+'''
+
+- Guión g59 :
+''' #!/bin/bash
+
+VAR=`(test -f $1 && test -x $1) && echo true || echo false` # true si es plano y tiene permiso de ejecución
+VARS=` test -h $1 && echo true || echo false`  # true si es un enlace símplico
+
+printf "Plano y con permiso de ejecución: %s \n" $VAR;
+printf "Enlace simbólico: %s \n" $VARS;
+'''
+
+
+Ejercicio 5.10: Ejecute help test y anote qué otros operadores se pueden utilizar con la orden test y para
+qué sirven. Ponga un ejemplo de uso de la orden test comparando dos expresiones aritméticas y otro
+comparando dos cadenas de caracteres.
+
+ String operators:
+    
+      -z STRING      True if string is empty.
+    
+      -n STRING
+         STRING      True if string is not empty.
+    
+      STRING1 = STRING2
+                     True if the strings are equal.
+      STRING1 != STRING2
+                     True if the strings are not equal.
+      STRING1 < STRING2
+                     True if STRING1 sorts before STRING2 lexicographically.
+      STRING1 > STRING2
+                     True if STRING1 sorts after STRING2 lexicographically.
+    
+    Other operators:
+    
+      -o OPTION      True if the shell option OPTION is enabled.
+      -v VAR	 True if the shell variable VAR is set
+      -R VAR	 True if the shell variable VAR is set and is a name reference.
+      ! EXPR         True if expr is false.
+      EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.
+      EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.
+    
+      arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,
+                     -lt, -le, -gt, or -ge.
+
+Ejercicio 5.11: Responda a los siguientes apartados:
+
+a) Razone qué hace la siguiente orden:
+if test -f ./sesion5.pdf ; then printf “El archivo ./sesion5.pdf existe\n”; fi
+
+Si existe el achivo de la carpeta en la que estamos y es de texto plano escribe en consula que el mensaje existe.
+
+b) Añada los cambios necesarios en la orden anterior para que también muestre un mensaje de aviso en caso
+de no existir el archivo. (Recuerde que, para escribir de forma legible una orden que ocupe más de una
+línea, puede utilizar el carácter “\” como final de cada línea que no sea la última.)
+
+blanca@debian:~/Documentos/FS/prácticas$ if test -f ./sesion5.pdf ; then printf “El archivo ./sesion5.pdf existe\n”; else printf "sintiendolo mucho el archivo no existe\n"; fi;
+
+
+c) Sobre la solución anterior, añada un bloque elif para que, cuando no exista el archivo ./sesion5.pdf,
+compruebe si el archivo /bin es un directorio. Ponga los mensajes adecuados para conocer el resultado
+en cada caso posible.
+
+blanca@debian:~/Documentos/FS/prácticas$ if test -f ./sesion5.pdf ; then printf “El archivo ./sesion5.pdf existe\n”;elif test -x \bin;then printf "el archivo no existe pero bin es un directoria"; else printf "sintiendolo mucho el archivo no existe\n"; fi;
+sintiendolo mucho el archivo no existe
+
+
+d) Usando como base la solución del apartado anterior, construya un guion que sea capaz de hacer lo mismo
+pero admitiendo como parámetros la ruta relativa del primer archivo a buscar y la ruta absoluta del
+segundo. Pruébelo con los dos archivos del apartado anterior.
+
+- guión:
+
+#!/bin/bash
+
+if test -f $1 && test -d $2;
+then printf "El archivo existe y lo otro es un direcctorio \n";
+elif test -f $1;
+then printf " el archivo no existe \n";
+elif test -d $2;
+then printf "Hoy no das pie con bola \n";
+else printf "ni el archivo existe, ni lo tuyo es un directorio \n";
+fi;
+
+
+Ejercicio 5.12: Construya un guion que admita como argumento el nombre de un archivo o directorio y que
+permita saber si somos el propietario del archivo y si tenemos permiso de lectura sobre él.
+
+Guión:
+
+#!/bin/bash
+ if test -O $1 && test -r $1;
+ then printf "Usted es el propietario y tiene permiso de lectura \n";
+ elif test -O $1;
+ then printf "Usted es el propietario, pero no tiene permiso de lectura \n";
+ elif test -r $1;
+ then print "usten No es el propietario, pero tiene permiso de lectura \n";
+ else printf "ni es propietario, ni tiene permiso de lectura \n";
+ fi;
+
+Ejercicio 5.13: Escriba un guion que calcule si el número de días que faltan hasta fin de año es múltiplo de cinco
+o no, y que comunique el resultado de la evaluación. Modifique el guion anterior para que admita la opción -h de
+manera que, al ejecutarlo con esa opción, muestre información de para qué sirve el guion y cómo debe ejecutarse.
+El siguiente guion de ejemplo se puede utilizar para borrar el archivo temporal que se le dé como argumento. Si
+rm devuelve 0, se muestra el mensaje de confirmación del borrado; en caso contrario, se muestra el código de
+error. Como se puede apreciar, hemos utilizado la variable $LINENO que indica la línea actualmente en ejecución
+dentro del guion.
+
+
+#!/bin/bash
+
+VAR="365-$(date +%j)" | bc -s;  #no utilizar -l, ya que te utiliza los decimales y no funciona
+if $1 == "-h"]];
+then printf "Este scritp sirve para saber si el número de días que quedan para fin de año es mútiplo de 5 \n";
+elif [$VAR == 0]];
+then printf "quedan días múltplos de 5 \n";
+else printf "los días que quedan no son múltiplos \n";
+fi;
+
+Ejercicio 5.14: ¿Qué pasa en el ejemplo anterior si eliminamos la redirección de la orden if?
+
+Si se borra la redirección pasa que el mensaje de error que emite el sistema operativo , por
+ejemplo si el archivo no existe, se muestra en pantalla además de nuestro mensaje. Si no lo
+eliminamos no se muestra, ya que se envía a /dev/null.
+
+
+Ejercicio 5.15: Haciendo uso del mecanismo de cauces y de la orden echo, construya un guion que admita un
+argumento y que informe si el argumento dado es una única letra, en mayúsculas o en minúsculas, o es algo
+distinto de una única letra.
+
+#!/bin/bash
+if [ `echo $1 | grep -e '^.$'` ]
+then
+echo "Es un unico caracter"
+if [[ $1 =~ [A-Z] ]]
+then
+echo "Y es una letra mayuscula"
+elif [[ $1 =~ [a-z] ]]
+then
+echo "Y es una letra minuscula"
+else
+echo "No es una letra, es otro caracter"
+fi
+else
+echo "No es un unico caracter"
+fi
+
+
+Haciendo uso de expresiones regulares, escriba una orden que permita buscar en el árbol de
+directorios los nombres de los archivos que contengan al menos un dígito y la letra e. ¿Cómo sería la
+orden si quisiéramos obtener los nombres de los archivos que tengan la letra e y no contengan ni el 0
+ni el 1?
+find / -regex '.*\([0-9]+.*e\).*'
+find . -regex '.*e.*' -and -not -regex '.*[01].*'
+
+Ejercicio 5.17: Utilizando la orden grep, exprese una forma alternativa de realizar lo mismo que con wc -l.
+
+grep -c

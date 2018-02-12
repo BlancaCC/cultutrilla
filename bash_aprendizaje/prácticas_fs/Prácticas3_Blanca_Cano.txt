@@ -1,0 +1,28 @@
+Blanca Cano Camarero DGIIM Granada 28/IX/2017
+Ejercicio 3.1
+blanca@debian:~$ chmod o+x víctima.txt 
+blanca@debian:~$ chmod g+wx víctima.txt 
+blanca@debian:~$ chmod go-r víctima.txt 
+blanca@debian:~$ chmod u+x,o+r víctima.txt 
+blanca@debian:~$ chmod g+x e*
+
+Ejercicio 3.2
+blanca@debian:~/Documentos/FS/prácticas$ ls >> aaa/ej31
+blanca@debian:~/Documentos/FS/prácticas$ tail -2 aaa/ej31 >> aaa/ej32
+blanca@debian:~/Documentos/FS/prácticas$ cat aaa/ej32
+
+Ejercicio 3.3
+blanca@debian:~/Documentos/FS/prácticas$ ls ~ | tail -6
+blanca@debian:~/Documentos/FS/prácticas$ wc -m {e,f}*
+
+Ejercicio 3.4
+blanca@debian:~/Documentos/FS/prácticas$ man chmod | tail -17 >> ejercicio1
+blanca@debian:~/Documentos/FS/prácticas$ pwd >> ejercicio1 
+blanca@debian:~/Documentos/FS/prácticas$ (who ; ls) > ejercicio3
+blanca@debian:~/Documentos/FS/prácticas$ chmod o+x,u+x,a+x,g-r ejercicio?
+
+
+
+
+
+

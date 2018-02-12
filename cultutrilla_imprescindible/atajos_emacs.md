@@ -68,10 +68,31 @@ opciones dentro de copiar y reemplazar:
   , 	      | muestra la situación actual del cursor, dejando de marcar el resto miestras se tenga pulsado
   n 	      | salir del modo  
 
-## INSTALAR PAQUETES 
+## INSTALAR PAQUETES
+### opción 1
 `M-x list-packages <ENT>` abre el sistema de paquetes de emacs, 
 `i`para marcarlos, 
 `x `para ejecutar la instalación
+
+### Opción 2
+1- Ten e cuenta de tener `custom-set-variables` en el archivo init ( normalemente ` ~/.emacs `), si no es así copia-pega este código:
+```
+(require 'package)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa-stable" . "http://stable.melpa.org/packages/")))))
+(package-initialize)
+```
+
+2- Ejeuta emacs y escribe el siguiente código ` M-x package-refresh-contents `
+3- Después instala un paquete cualquiera, por ejemplo: ` M-x package-install RET haskell-mode `
+4- Ya está instalado, ahora solo te falta aprender haskell para disfrutar del paquete de ejemplo :)
 
 ## Abril shell
 `M-x shell` este comando te abre la termianl desde emacs
