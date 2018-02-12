@@ -61,6 +61,8 @@ los link tienen la siguiente sintaxis `[<mensaje>](<link>).`
 definido con almohadillas \##. Para ello utilizas la sintaxis descrita anteriormente, pero
 escribiendo como link el título en minúsculas y sustituyendo espacios por guiones.
 Ejemplo.: `[<mensaje>](#visualización-del-contenido) `
+- Puedes hacer referencia  a un enlace relativo con la siguiente sintáxis (heredada de html)
+`<a href="nombre_dir"> nombre_que_aparecerá_en_la_página<\a> `  
 
 ### Imágenes
 
