@@ -64,6 +64,26 @@ Ejemplo.: `[<mensaje>](#visualización-del-contenido) `
 - Puedes hacer referencia  a un enlace relativo con la siguiente sintáxis (heredada de html)
 `<a href="nombre_dir"> nombre_que_aparecerá_en_la_página<\a> `  
 
+### Índices  
+- Podemos utilizar el estilo markdaniano de link `[<mensaje>](#visualización-del-contenido) `  
+- O continuar a lo html: 
+  - Con la etiqueta para crear enlaces internos  `<a name="id1"></a>`
+  ```md
+  [Título que se cree muy independiente](#id1)
+  #Soy un títulillo desatado <a name="id1"></a>
+  ```
+  - O la etiqueta *div* que se utiliza para crear secciones dentro de un texto en html  
+  ```md
+  [La parte interesante del documento](#id2)
+  <div id='id2' />
+  Texto aburrido
+  ```  
+    [Título que se cree muy independiente](#id1)
+	|
+	|
+	[Parte interesante de un documento](#id2)
+	|
+  #Soy un títullo desatado <a name="id1"></a>
 ### Imágenes
 
 - La sintaxis es `![<Texto ayuda>](<link de la imagen>) `
@@ -103,7 +123,7 @@ columna 1 | columna 2
    dato 1 | dato 2
     dat 3 | dat 4
 ``` 
-
+<div id='id2' />
 ### Emoticonos markdown  
 Esta persona se lo ha montado súper bien, os dejo su [repositorio](https://gist.github.com/rxaviers/7360908) 
 

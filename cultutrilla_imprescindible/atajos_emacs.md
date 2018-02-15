@@ -97,3 +97,9 @@ opciones dentro de copiar y reemplazar:
 ## Abril shell
 `M-x shell` este comando te abre la termianl desde emacs
 `c-x b <enter> ` cierra la terminal  
+
+## Recursos donde profuncizar  
+	Nombre  | Descripción 
+		--- | --- 
+		[Notas sobre emacs](http://www.lapipaplena.org/emacs/) | Es maravilosa esta wed, altamente recomentdada, se agradece el trabajo bien hecho.  
+		[combinaciones de teclado emacs](http://wwwae.ciemat.es/~oglez/webcms/oginfo/combinaciones_emacs.html) | Listado de combinaciones de teclado que alguien utiliza
