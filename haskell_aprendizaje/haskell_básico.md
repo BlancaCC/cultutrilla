@@ -1,15 +1,15 @@
 # Haskell básico
-He aquí un esquema de lo que sé en de Haskell a modo de recordatorio. :)
+He aquí un esquema de lo que sé de Haskell a modo de recordatorio. :)
 
 ## Índice de contenidos  
 - [Conceptos básicos](#i1)  
 - [Funciones](#i2)  
-- [Datos](#i3)
-  -[Bool](#i3_0)
-  -[Int y Integer](#i3_1)
-  -[Float y Double](#i3_2)
-  - [Listas](#i3_)
--[Input and output](#i4)
+- [Datos](#i3)  
+  -[Bool](#i3_0)  
+  -[Int y Integer](#i3_1)  
+  -[Float y Double](#i3_2)  
+  - [Listas](#i3_)  
+-[Input and output](#i4)  
 
 ## Conceptos básico <a name="i1"></a>
 
@@ -56,14 +56,15 @@ Prelude> sumanos 1 2
 Para defininir un nombre el la GHCi `let nombre = algo`  
 ### Tipos simples predefinidos
 
-#### Bool <a name="3_0"></a>  
+#### Bool <a name="i3_0"></a>  
 
 Operador o función | Descripción  
-	--- | ---
-	` && ` | Conjunción lógica  
-	`|| ` | Disyunción lógica  
-	` not ` | Negación lógica  
-	` otherwise ` | Función constante que devuelve el valor true  
+--- | ---
+` && ` | Conjunción lógica    
+`\|\| ` | Disyunción lógica  
+` not `| Negación lógica   
+` otherwise ` | Función constante que devuelve el valor true    
+	
 #### Int <a name="i3_1"></a>
 Exprsiones para determinar rango de valores:
 - `minBound :: Int` 
@@ -72,13 +73,13 @@ Exprsiones para determinar rango de valores:
 ##### Funciones básicas y operadores definidos para el tipo entero  
 
 Operador o función | Descripción  
-	--- | --- 
-	` + - * ^ `   | Suma, resta, producto de enteros, potencia exponente entero  
-	`div mod `    | Cociente y resto de dividir dos enteros  
-	` abs `       | Valor absoluto
-	`signum`      | 1 positivo -1 negativo 0 0
-	`negate` `- ` | invierte signo del argumento  
-	`even ` `odd` | bool comprueba si es par o impar    
+--- | --- 
+` + - * ^ `   | Suma, resta, producto de enteros, potencia exponente entero  
+`div mod `    | Cociente y resto de dividir dos enteros  
+` abs `       | Valor absoluto  
+`signum`      | 1 positivo -1 negativo 0 0  
+`negate` `- ` | invierte signo del argumento   
+`even ` `odd` | bool comprueba si es par o impar     
 	
 #### Integer  
 - Valores de tipo Int con precisión ilimitada,  utilizan los mismo oeradores y funciones
@@ -92,20 +93,21 @@ Operador o función | Descripción
 ##### Funciones y operadores  
 
 Operador o función | Descripción  
-	--- | --- 
-	` + - * ` | - 
-	` ^ ` | Potencia de base real, pero exponente natural  
-	`**` | Potencia de base y exponente real  
-	`abs`| - 
-	`signum` | - 
-	`negate - ` | - 
-	` sin asin cos acos tan atan ` | funciones trigonométricas, trabajan con radianes  
-	`atan2 :: Float -> Float -> Float`| `atan2 x y` devuelve el arcotangente de x/y  
-	`log exp` | - 
-	`sqrt` | - 
-	`pi` | -  
-	`truncate round floor ceiling ` | Fnciones de redondeo, respectivamente: elimina parte decimal, redondea al entero más proximos, entero inferior, entero superior ¿Cual es la diferencia entre truncate y floor ? 
-	`fromInt` | convierte a Int  
+--- | ---   
+` + - * ` | -   
+` ^ ` | Potencia de base real, pero exponente natural   
+`**` | Potencia de base y exponente real   
+`abs`| -   
+`signum` | -   
+`negate - ` | -   
+` sin asin cos acos tan atan ` | funciones trigonométricas, trabajan con radianes    
+`atan2 :: Float -> Float -> Float`| `atan2 x y` devuelve el arcotangente de x/y  
+`log exp` | -   
+`sqrt` | -   
+`pi` | -    
+`truncate round floor ceiling ` | Fnciones de redondeo, respectivamente: elimina parte decimal, redondea al entero más proximos, entero inferior, entero superior ¿Cual es la diferencia entre truncate y floor ?   
+`fromInt` | convierte a Int    
+	
 ### Double  
 Real con más precisión  
 
@@ -116,12 +118,12 @@ Real con más precisión
 - Representación de caracteres especiales: 
 
 Carácter | Descripción  
-	--- | ---
-`	'\n' `| salto de linea
-`	'\t` `| tabulador
-` `\''` | comilla simple
-`'\"' ` | comilla doble
-`' \\'` | barra inclinada hacia la izquierda  
+--- | ---
+`'\n' `| salto de linea  
+`'\t' `| tabulador  
+`'\''` | comilla simple  
+`'\"' ` | comilla doble  
+`' \\'` | barra inclinada hacia la izquierda    
 
 #### Funciones  
 
