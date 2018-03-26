@@ -1,4 +1,4 @@
--- Eso de repetirse está muy bien, pero a veces es tedioso para el reiterador, he aquí distintas versiones en haskell para cansines de alta arcunia
+-- Eso de repetirse está muy bien, pero a veces es tedioso para el reiterador, he aquí distintas versiones en haskell para cansinos de alta arcunia
 
 -- Granada 12-02-2018
 
