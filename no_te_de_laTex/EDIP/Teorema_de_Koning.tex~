@@ -1,0 +1,24 @@
+%Plantilla para realizar los ejercicios de manera individual y que sean visibles y útiles también de manera modular
+\ifdefined\COMPLETE
+
+%%%%%%%%%%%%%%%%%%%%% aquí escrbís lo que queráis que tenga el documento %%%%%%%
+El teorema de Köning dice que 
+
+%%%%%%%%%%%% fin de vuestro documento %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\else 
+\def\COMPLETE{}
+
+\documentclass[a4paper , 11pt, spanish ]{article}
+% Codificación e idioma, para las tildes crucial
+\usepackage{paquetes}
+\title {Teomrema de Koning }
+\author{Blanca}
+
+
+\begin{document}
+\maketitle 
+\input{./Teorema_de_Koning} %nombre de este documento 
+\end{document}
+
+
+\fi
