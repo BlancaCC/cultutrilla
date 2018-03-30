@@ -7,6 +7,9 @@ Programas						| Descripción
 M a José Hidalgo Doblado y de la Universidad de Sevilla.  
 <a href="bucle_de_amor.hs"> bucle_de_amor.hs </a>      	| Distintas versiones para escribir n veces un mensaje por terminal  
 <a href="listas.hs"> listas.hs </a> 	     		| Dada una lista y n un naturar develve lista repitiendo n veces cada elemento lista  
+<a href="lista_pares.hs"> lista_pares.hs </a>  | Dada una lista de enteros devuelve las posiciones pares  
+<a href="filter.hs"> filter.hs </a>  | Devuelve los enteros menores de una lista en otra lista  
+
 
 
 ---
