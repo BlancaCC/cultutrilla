@@ -16,6 +16,7 @@ He aquí un esquema de lo que debería saber de Haskell a modo de recordatorio. 
   -[Patrones constantes](#5_1)  
   -[Patrones para listas](#5_2)  
 -[Input and output](#i99)  
+- [Instruciones interesantes para ahorar tiempo](#6)
 
 ## Conceptos básico <a name="i1"></a>
 
@@ -282,4 +283,12 @@ decapitar (_:xs) = xs
 
 función		| Descripción				| Ejemplo
 --- 		| --- 					| ---
-putStrLn	| Imprime en terminal 			| putStrLn "I love Haskell"
+putStrLn	| Imprime en terminal 			| putStrLn "I love Haskell"  
+
+## Instrucciones interesantes que ahorran tiempo <a name i6></a>
+
+Instrucción | utilidad | ejemplo 
+--- | --- | ---  
+take | coge los n últimos elementos de una lista   
+
+

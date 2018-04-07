@@ -9,7 +9,8 @@ M a José Hidalgo Doblado y de la Universidad de Sevilla.
 <a href="listas.hs"> listas.hs </a> 	     		| Dada una lista y n un naturar develve lista repitiendo n veces cada elemento lista  
 <a href="lista_pares.hs"> lista_pares.hs </a>  | Dada una lista de enteros devuelve las posiciones pares  
 <a href="filter.hs"> filter.hs </a>  | Devuelve los enteros menores de una lista en otra lista  
-
+<a href="listan.hs"> listan.hs </a> 	     		| Devuelve una lista de tamaño n  
+<a href="popurri_listas.hs"> popurri_listas.hs </a> | Elementos posiciones impares, suma impares... (no merecía la pena separarlos)	     
 
 
 ---
