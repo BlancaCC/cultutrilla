@@ -56,6 +56,19 @@ La mejor forma es mediante línea de comandos
 
 
 
+## Estructuras de control de flujo  
+### for  
+```
+for i:1 thru n do
+(
+     print(i),
+    print(n-i)
+);
 
+```
 
+### if   
 
+```
+if 1 = n then 1 else n
+```
