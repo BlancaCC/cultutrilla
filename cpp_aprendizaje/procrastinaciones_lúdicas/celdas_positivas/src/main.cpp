@@ -26,7 +26,6 @@ int main()
 	  
 	  fichero.getline( ms , 100 );
 	  mensaje.set_mensaje(ms);
-	  // mensaje.show_mensaje();
 	  insertar_celda( lista , mensaje);
 	  
 	  
@@ -39,7 +38,27 @@ int main()
     cerr << "Fichero no encontrado" << endl;
   
   recorrer_celda( lista );
-  destruir_celda( lista);
+  cout << "\nAhora la voy a recorrer del revés, porque puedo y porque quiero \n"; 
+  recorrer_inversa( lista);
+
+  cout << "Buaaah ¿te has dado cuenta de lo corta que es esta lista positiva?"
+       << " sólo tiene " << dimension_celda( lista ) << endl
+       << "VAMOS A AMPLIARLA ¿QUÉ PROPONE?" << endl;
+  
+  cin.getline(ms,100);
+  cout << "Me gusta ese mensaje, tiene pinta de poder añadirse en la posición 5...\n";
+
+  Celda *nueva;
+  nueva = new Celda;
+  nueva->mensaje.set_mensaje(ms);
+  inserta_celda( nueva , lista , 5);
+
+  cout << "Ayyy qué mona ha quedado, te la vuelvo a mostrar: \n";
+  recorrer_celda( lista);
+
+  cout << "Bueno, llegó la hora de acostarse... \n";
+  
+  destruir_celda( lista); // Esto es una destrucción pacífica, ningún puntero murió contra su voluntad, ahora son punteros salvajes
   
 
   return 0;

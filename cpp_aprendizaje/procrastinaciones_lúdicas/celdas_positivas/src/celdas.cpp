@@ -9,6 +9,12 @@
 
 using namespace std;
 
+Mensaje::Mensaje()
+{
+  const char* ms_vacio = "Eres maravillamente genial :)";
+  strcpy(mensaje ,ms_vacio);
+  this->positividad = 3;
+}
 Mensaje::Mensaje( char ms [])
 {
   strcpy(mensaje ,ms);
@@ -77,3 +83,41 @@ void destruir_celda( Celda* &lista )
       delete aux;
     }
 }
+
+void recorrer_inversa( const Celda * lista)
+{
+  if ( lista->sig != NULL)
+    recorrer_inversa(lista->sig );
+  lista->mensaje.show_mensaje();
+}
+
+int dimension_celda( const Celda *lista)
+{
+  int salida = 1;
+  if ( lista->sig != NULL)
+    salida += dimension_celda(lista->sig);
+  return salida;
+    
+}
+
+void inserta_celda_aux( Celda* &celda_nueva , Celda* &lista , const int pos ,  int estado )
+{
+  if (estado < pos )
+    inserta_celda_aux( celda_nueva , lista->sig ,pos , ++estado);
+  else
+    {
+      celda_nueva->sig = lista->sig;
+      lista->sig = celda_nueva;
+    }
+}
+  
+void inserta_celda( Celda* &celda_nueva , Celda* &lista , const int pos )
+{
+  if (pos > dimension_celda(lista))
+    cerr << "Cariño, mira que te acabo de decir el tamaño...\n";
+  else
+    {
+      inserta_celda_aux( celda_nueva , lista , pos );
+    }
+}
+
