@@ -292,3 +292,29 @@ Instrucción | utilidad | ejemplo
 take | coge los n últimos elementos de una lista   
 
 
+# Ampliación de listas   
+
+perador | Descripción | Ejemplillo si me apetece esc
+``` ++ ``` Este operador concatena listas.  
+Funciones selectoras: head y tail, devuelven la cabeza y
+Comando | Descripción | Ejemplillo si me aptece  
+--- | --- | ---   
+`++ ` | Conactena dos listas | ` [1]++[0]`  
+concat | Para lista de listas | `concat[ [1..2], [9,9],[111]] -> [1,2,9,9,111]`  
+head tail | primer elemento y último | aaa  
+take | coge los n primeros | `take 7 [1..898989] -> [1,2,3,4,5,6,7]`  
+drop | deshecha los n primeros  | ...  
+splitAt | combina take y drop | `splitAt 3 [0..10] -> ([0,1,2],[3,4,5,6,7,8,9,10]) `  
+`!!` | selección de elemento dentro de una lista | `[1..10] !! 0 ->1 `   
+zipWith | aplica cierta función a los elementos de una lista, tomándolos de dos en dos | `zipWith (*)[1..3][5..] -> [5,12,21]`  
+zip | igual sin operación | `zip [0..3]['a'..] -> [(0,'a'),(1,'b'),(2,'c'),(3,'d')]`  
+unzip | proceso inverso | ooo   
+map | aplicar _ a todos lo elemento de la lista | `map  (+1) [1..2] ->[2,3]`  
+filter | aplica un filtro  | ...  
+takeWhile | filtro hasta que se encuentra un elemento que no debería estar dentro  | ` takeWhile (<3) [-1..3] ->[-1,0,1,2] `  
+dropWhile | elimina mientras que se de la condición | ...  
+
+
+
+ 
+
