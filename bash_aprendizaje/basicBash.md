@@ -1,5 +1,8 @@
  > Aquí encontrarás lo suficiente para que con un man seas la reina del mambo
 
+## Instrucciones que utilizo en mi día a día
+` find . -type f -name '*~' -delete `
+Precioso comando que elimina las copias de segurida de manera recursiva de la carperta en que estés.
 
 ## Comandillos útiles para utilizar en terminal  
 - ` C-l` limpiar terminal
