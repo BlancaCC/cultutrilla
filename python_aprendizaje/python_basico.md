@@ -1,4 +1,4 @@
-## Python básico
+# Python básico
 
 ### Nociones básicas
 - Python separa un bloque de otro por el indexado *OJO CON EL INDEXADO*
