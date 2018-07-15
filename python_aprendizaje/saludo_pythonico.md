@@ -30,8 +30,10 @@ lista.append( True ) 	  	     	       	 	     # añade el valor lógico True al 
 lista.pop( 3 ) 	   					     # elimina y devuelve el valor en la posición 3: ['P','a'], (como es natural se empieza en 0
 	     						     # 	       ['P','a'] además es equivalente a 'pa'
 ```							   
-Escribiendo `help( list ) `tendrás todos los métodos (append y pop son dos métodos ) de las listas.
-Y escribiendo `help( list.append )`tendrás el de uno en concreto
+Escribiendo `help( list ) `tendrás todos los métodos (append y pop son dos métodos ) de las listas explicados
+Y escribiendo `help( list.append )`tendrás el de uno en concreto,
+también puedes conocer sólo los métodos con `dir( list )`
+
 
 También existen los diccionarios y conjuntos, eso se lo dejo a su propia investigación, pero de momento con lo visto irá servida <3
 

@@ -34,5 +34,9 @@ elif numero > 20:
 else :
      print("El núemro está entre medias")
 
+## Funciones interesantes
+Función | Descripción | Ejemplo
+--- 	| --- 	      | ---
+sum 	| suma elementos de una lista | `sum ([1,2,3]) -> 6`
 
 
