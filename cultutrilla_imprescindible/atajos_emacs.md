@@ -14,6 +14,7 @@
  C-f			| una posición adelante
  M-f			| una palabra alante
  M-b			| una palabra atrás
+ M-g M-g <natural>	| se mueve a una línea en concreto  
  C-a 			| retroceder al principio de una línea donde esté el cursor
  C-e 			| avanzar al final de la línea donde esté el cursor
  M-a			| retroceder al principo de una oración
@@ -51,6 +52,9 @@ Espacio : para aceptar
  C-SPC			  | desde el cursos hasta donde estoy para seleccionar
  c\-w			  | para borrar lo seleccionado
  M\-w			  | para copiar sin borrar
+ c-x u 			  | para desacer una operación
+ c-/ 			  | equivalente a c-x u
+ 
 
 ## Copiar y reemplazar
  `M% *string_a_reemplazar* <ENT> *string_nuevo* <ENT>`
