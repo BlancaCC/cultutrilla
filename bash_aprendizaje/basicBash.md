@@ -5,7 +5,7 @@
 Precioso comando que elimina las copias de segurida de manera recursiva de la carperta en que estés.
 
 ## Comandillos útiles para utilizar en terminal  
-- ` C-l` limpiar terminal
+- ` C-l` Desplazar la línea, por defecto hace que te aparezca al principio, depués medio y final.  
 - `clear` limpiar terminal
 - Para cerrar al termial C-alt-w
 - Cerrar una ventana que no sea la terminal `C-quit` y que no se haya abierto por medio de esa
