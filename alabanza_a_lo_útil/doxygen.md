@@ -24,25 +24,23 @@ Se puede instalar en distintas distribuciones linux.
 
 Es tan facil como usar comentarios en el codigo, de la siguiente forma para cada funcion:
 
-`
-/**
-*   @brief Descripcion de la tarea de la funcion
-*   @param x1 Parametro 1 de la funcion
-*   @param x2 Parametro 2 de la funcion
-*   @pre   Precondición
-*   @return Cosas que retorna la funcion
-*/
 
-`
+    /**
+    *   @brief Descripcion de la tarea de la funcion
+    *   @param x1 Parametro 1 de la funcion
+    *   @param x2 Parametro 2 de la funcion
+    *   @pre   Precondición
+    *   @return Cosas que retorna la funcion
+    */
+
 
 Tambien se admite poner el autor al principio:
 
-`
-/**
-*   @author Antonio David Villegas Yeguas
-*
-*/
-`
+
+    /**
+    *   @author Antonio David Villegas Yeguas
+    *
+    */
 
 
 Una vez realizado esto, basta con ejecutar:
