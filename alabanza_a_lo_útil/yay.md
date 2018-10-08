@@ -2,7 +2,7 @@
 
 Utilizado para instalar paquetes AUR en distribuciones como Arch o manjaro.
 
-Este mensaje procede de [Antonio](https://github.com/advy99), que fue mi guía informático, es genial este muchacho, estoy totalmente agradecida con él.
+Este mensaje procede de [Antonio](https://github.com/advy99), que fue mi guía informático. Es genial este muchacho, estoy totalmente agradecida con él.
 
 Antonio, [27.08.18 16:12]
 `git clone https://aur.archlinux.org/yay.git`
