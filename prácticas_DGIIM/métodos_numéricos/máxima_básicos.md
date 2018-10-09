@@ -1,15 +1,15 @@
 # Máxima comandos básicos  
-He aquí un pequeño resumen de las funciones y operaciones de máxima, introducida en la asignatura de métodos numéricos del segundo cuatrimestre de primero del grado de ingeniería informática y matemáticas  
-## Representación símbolica de números  
-- % para indicar que es una representación simbólica, puede haber un número especial (%e por ejemplo) o una casilla ya calculada  
+He aquí un pequeño resumen de las funciones y operaciones de Máxima, introducida en la asignatura de métodos numéricos del segundo cuatrimestre de primero del doble grado de ingeniería informática y matemáticas.
+## Representación simbólica de números  
+- % para indicar que es una representación simbólica, puede haber un número especial (%e por ejemplo) o una casilla ya calculada.  
 
 ### Números irracionales hasta el momento vistos: 
-e 
-pi
+e (%e)
+pi (%PI)
 
 ## Definición y borrado de variables
-- `nombre:valor`
-ejemplo: ` x: 20`
+- Para definir: `nombre:valor`
+Ejemplo: ` x: 20`
 
 - Para borrar una variable ` kill ( nombre) ` `kill ( x) `
 - Para borrarlas todas `kill( all )`
@@ -20,23 +20,23 @@ ejemplo: ` x: 20`
 
 Funciones básicas  | Descripción  
 --- | ---
-print ()  | -   
-float () | genera redondeo decimal real de un número  
-fpprec | variar el núemro de decimales  
-bflaot() | para ver con el número de decimales modificados    
+print ()  | Muestra un mensaje   
+float () | Genera redondeo decimal real de un número  
+fpprec | Variar el número de decimales  
+bflaot() | Para ver con el número de decimales modificados    
 
 ### Funciones básicas matemáticas 
 --- 
-sin   
-cos  
-tan  
-asin  
-acos  
-atan  
-sqrt  
-log   -- neperiano simpre  
-exp   
-abs   
+- sin   
+- cos  
+- tan  
+- asin  
+- acos  
+- atan  
+- sqrt  
+- log   -- neperiano simpre  
+- exp   
+- abs   
 ### Definición de funciones, derivadas, integrales y gráficas   
 
 #### Definción de ecuación 
@@ -45,13 +45,13 @@ abs
 Función     | Descripción  
 --- | ---   | ---
 diff( f(x) , x ) | Derivada de orden 1  
-diff (f(x , x , n)) | Derivada de orenden n   
-integrate ( f(x) , x , a , b)  | Integra definida en un intervalo de [a,b]  
-integrate(f(x) , x)  | Integrar general, sabemos que le hace falta una cte  
+diff (f(x , x , n)) | Derivada de orden n   
+integrate ( f(x) , x , a , b)  | Integral definida en un intervalo de [a,b]  
+integrate(f(x) , x)  | Integral primitiva, sabemos que le hace falta una cte  
 
 
 ## Dibujar gráfica  
-La mejor forma es mediante línea de comandos
+La mejor forma es mediante línea de comandos o usando las ayudas de la barra de herramientas.
 
 
 
@@ -66,9 +66,20 @@ for i:1 thru n do
 );
 
 ```
+```
+for i:1 step 2 thru n do
+(
+	print(i)
+	print(n-i)
+);
+```
 
 ### if   
 
 ```
 if 1 = n then 1 else n
+```
+¡Se pueden anidar!
+```
+if n = 2 then 2 else if n = 1 then 3 else 1
 ```
