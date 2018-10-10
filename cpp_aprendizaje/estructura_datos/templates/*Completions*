@@ -1,0 +1,6 @@
+Click on a completion to select it.
+In this buffer, type RET to select the completion near point.
+
+Possible completions are:
+cpp-highlight-buffer
+cpp-parse-edit
