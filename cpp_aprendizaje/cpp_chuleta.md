@@ -1,7 +1,7 @@
 ## CHULETA DE LO QUE VOY APRENDIENDO SOBRE C++ ENTRE LOS LIBROS QUE CONSULTO Y LAS ASIGNATURAS DE INFORMÁTICA
 
 ## Declaración de funciones
-- Declaración `inline`: sugiere al compilador que copie el código de la función y lo reemplaze por cada llamada a la función, si el código no es muy extenso, esto supondría una optimización.
+- Declaración `inline`: sugiere al compilador que copie el código de la función y lo reemplace por cada llamada a la función, si el código no es muy extenso, esto supondría una optimización.
 
 ## Conversión de datos 
 Conversión de tipos`static_cast<dataTypeName>(expresión) ` `static_cast<double>(25)`
@@ -12,7 +12,7 @@ Conversión de tipos`static_cast<dataTypeName>(expresión) ` `static_cast<double
  Función                                | Utilidad                                       |Ejemplo    
   ---                                   | ---                                            | ---
  `istreamVar.get(varChar) `              | Lee un carácter                                | `cin.get(ch) `                         
- `istreamVar.ignore(intExp , chEx)`      | intExp: número de carácteres a ignorar <br>  chExp: caráceter a partir del cual deja <br> de ignorar.  Prevalece chExp    | `cin.ignore(100, '\n' ) `           
+ `istreamVar.ignore(intExp , chEx)`      | intExp: número de carácteres a ignorar <br>  chExp: carácter a partir del cual deja <br> de ignorar.  Prevalece chExp    | `cin.ignore(100, '\n' ) `           
 `istreamVar.putback(ch)`                | Incluye último carárcter                       |   
 `ch = istreamVar.peek()`                | Devuelve el siguiente carácter sin quitarlo    |    
  `istreamVar.clear();`                  | Cuando hay un error de lectura, el<br>sitema ignora todos, esta función lo resaura    	 |`cin.clear()`                          
@@ -23,7 +23,7 @@ Conversión de tipos`static_cast<dataTypeName>(expresión) ` `static_cast<double
 #### File input/output
 Lee y escribe en fichero. Pasos a segir:
 1. Include en la cabecera la biblioteca `#include<fstream>`
-2. Declara las variables que contendrán al fichero y su dirección `ifstream inData` si es de entrada y `oftream outData` si es de escritura
+2. Declara las variables que contendrán al fichero y su dirección `ifstream inData` si es de entrada y `ofstream outData` si es de escritura
 3. Abre los ficheros `filestreamVariable.open("sourceName")` ejemplo:` inData.open("disk:\\fichero.txt")`
 4. Lee y escribe en los ficheros con los operadores `<<`(escritura) y `>>` (lectura).
 5. Cierra los ficheros `nombre.close()`
@@ -36,7 +36,7 @@ Lee y escribe en fichero. Pasos a segir:
  Función                                | Utilidad						 |Ejemplo    
   ---                                   | ---                                           	 | ---
   `setprecition(<integer>)`		| número de decimales a utilizar, requiere *iomanip* 	 | `#include<iomanip> [omito código] cout<<setprecision(2)`
-  fixed 				| vuelve al estandar  		  	   		 | `cout.unsetf(ios::fixed)`
+  fixed 				| vuelve al estándar  		  	   		 | `cout.unsetf(ios::fixed)`
  scientific 				| números decimales en formato científico 		 | ---
   showpoint				| supone que la perte decimal es cero, y así la muestra  | `cout << showpoint`
  setw 					| fija un tamaño específico de columnas	     		 | `cout << setw(5) << x << endl `
@@ -51,7 +51,101 @@ Lee y escribe en fichero. Pasos a segir:
 [Código de ejemplo para output](https://github.com/BlancaCC/cultutrilla/blob/master/cpp_aprendizaje/ejemplosBasicos/output.cpp)
 
 ## Estrucutras de control
-(Paso por alto las básicas, si a alguno le apetece hacerlas...)
+
+### IF
+```cpp
+if(<condicion>){
+	<sentencias>
+}
+else if (<codicion2>){
+	<sentencias2>
+}
+else{
+	<sentencias3>
+}
+```
+Primeramente se evalúa la condición, si es verdad se ejecutan las sentencias y se ignora el resto del código.
+Si la primera condicióne es false, se  evalúa la condición2, y si es verdadera se ejecutan senctencias2 y se ignora el resto.
+Si tanto la condición como condición2 son falsas se ejecuta el apartado de sentencias3.
+Podéis probar a ejecutar el siguiente código:
+```cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	cout << "Introduzca el número n" << endl;
+	cin >> n;
+	
+	if(n == 1)
+		cout << "Primer if" << endl;
+	else if (n == 2)
+		cout << "Segundo if" << endl;
+	else
+		cout << "Tercer if" << endl;
+	return 0;
+}
+```
+### Bucles
+#### While
+```cpp
+while (<condicion>){
+	<sentencias>
+}
+```
+El bucle while evalúa una condición y, mientras sea cierta, se ejecuta la parte de sentencias.
+Podéis probar a ejecutar este código:
+```cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+	int i = 0
+	int n;
+	cout << "Introduzca el número n" << endl;
+	cin >> n;
+	
+	while(i < n){
+		cout << i << " ";
+		i++;
+	}
+	cout << endl << "Acabo de salir del bucle y entonces i vale... " << i << endl;
+	return 0;
+```
+¡Ojo a hacer bucles infinitos!
+
+#### For
+```cpp
+for(<inicializacion>; <condicion>; <consecuencia>){
+	<sentencias>
+}
+```
+El bucle for es otro bucle que es equivalente a este bucle while:
+```cpp
+<inicializacion>
+while (<condicion>){
+	<sentencias>
+	<consecuencia>
+}
+```
+El bucle for realiza la inicialización, evalúa la condición y si es verdad hará las sentencias y luego la consecuencia, y volverá a evaluar a condición, sentencias, consecuencias... hasta que la condición sea false y salga.
+Podéis probar a ejecutar el siguiente código:
+```cpp
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	cout << "Introduzca el número n" << endl;
+	cin >> n;
+	
+	for (int i = 0; i < n; i++)
+		cout << i << " ";
+	cout << endl << "Acabo de salir del bucle y entonces i vale... " << i << endl;
+	return 0;
+```
+¡Ojo a hacer bucles infinitos!
+
 
 ### Operador condicional **( ? : )**
 - Equivale a un if else.
@@ -87,7 +181,7 @@ Tipos de pasos de valores:
 - Sintaxis: `enum nombre = { valor1 , valor2 , valor99999 }`
 
 #### Operaciones en enum
-- Solo acepta suma y resta y lo que hace es coger el siguiente o el anterio elemento
+- Solo acepta suma y resta y lo que hace es coger el siguiente o el anterior elemento
 - Se debe hacer con `static_cast`, sintaxis: `value = static_cast<nombre_enum>(variable_tipo_enun +- int)`
 - Operadores ` < > <= >= ` compara posiciones
 
@@ -114,7 +208,7 @@ int ejmploEnum()
 
 ### typedef
 - Crea un alias para una variable
-- sintaxix: `typedef variableExistene nuevoNombre`
+- sintaxis: `typedef variableExistene nuevoNombre`
 - ejemplo: `typedef int integer`
 
 ### Namespace
@@ -131,7 +225,7 @@ int ejmploEnum()
 // para hacer referencia al namespace
 nombre_namespace::identifcador
 
-// Para ahorrase escribise nombre_namespoace::identificador
+// Para ahorrase escribir nombre_namespoace::identificador
 
 using namespace nombre_namespace; // incluye a todos los miembros
 using nombre_namespace::miembro ; // para incluir un miembro concreto
@@ -147,7 +241,7 @@ using nombre_namespace::miembro ; // para incluir un miembro concreto
 
 ## Vectores
 
-> No confundir con array, estos son dinámicos si necesidad de punteros
+> No confundir con array, estos son dinámicos sin necesidad de punteros
 > Lo escrito dentro de [] puede ser omitido
 
 - Se requiere de la **biblioteca vector** de la STL `include <vector>`  
@@ -156,7 +250,7 @@ using nombre_namespace::miembro ; // para incluir un miembro concreto
   - Por defecto a tamaño dado, contiene 0
 
 - Se pueden hacer vectores de vectores `vector< vector < TIPO > ( TAMAÑO , vector<TIPO>(TAMAÑO) )` `vector< vector <float > > notas_DGIIM( 6 )`  
-  - Cuidado de no escribir en la sintaxis `>>` ya que es un operado
+  - Cuidado de no escribir en la sintaxis `>>` ya que es un operador.
 
 ### Funciones miembras
 
@@ -165,7 +259,7 @@ using nombre_namespace::miembro ; // para incluir un miembro concreto
  size 	      | Devuelve tamaño de vector				   	| `VECTOR.size()`
  max_size     | Tamaño máximo (al declarse reserva un espacio de memoria ) 	| `VECTOR.max_size()`
  resize       | Modifica el tamaño del vetor 	      	      	 	   	| `VECTOR.resize( NUEVO_TAMAÑO )`
- empty	      | Devuelve si e vector está vacío 				| `VECTOR.empty()`
+ empty	      | Devuelve si el vector está vacío 				| `VECTOR.empty()`
  push_back    | Añade un elemento al final del vector				| `VECTOR.push_back(2.718281828)`
  pop_back     | Elimina el último elemento     					| `VECTOR.pop_back()`
 
