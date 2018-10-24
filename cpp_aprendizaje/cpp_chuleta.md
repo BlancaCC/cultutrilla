@@ -15,7 +15,7 @@ Conversión de tipos`static_cast<dataTypeName>(expresión) ` `static_cast<double
  `istreamVar.ignore(intExp , chEx)`      | intExp: número de carácteres a ignorar <br>  chExp: carácter a partir del cual deja <br> de ignorar.  Prevalece chExp    | `cin.ignore(100, '\n' ) `           
 `istreamVar.putback(ch)`                | Incluye último carárcter                       |   
 `ch = istreamVar.peek()`                | Devuelve el siguiente carácter sin quitarlo    |    
- `istreamVar.clear();`                  | Cuando hay un error de lectura, el<br>sitema ignora todos, esta función lo resaura    	 |`cin.clear()`                          
+ `istreamVar.clear();`                  | Cuando hay un error de lectura, el<br>sistema ignora todos, esta función lo restaura    	 |`cin.clear()`                          
  ` getline(istreamVar , strVar) ` 	| Permite leer string que contengan espacios   	 | ` getline( cin , miString )`
  
 [Código de ejemplo](https://github.com/BlancaCC/cultutrilla/blob/master/cpp_aprendizaje/ejemplosBasicos/input_output.cpp)
@@ -38,7 +38,7 @@ Lee y escribe en fichero. Pasos a segir:
   `setprecition(<integer>)`		| número de decimales a utilizar, requiere *iomanip* 	 | `#include<iomanip> [omito código] cout<<setprecision(2)`
   fixed 				| vuelve al estándar  		  	   		 | `cout.unsetf(ios::fixed)`
  scientific 				| números decimales en formato científico 		 | ---
-  showpoint				| supone que la perte decimal es cero, y así la muestra  | `cout << showpoint`
+  showpoint				| supone que la parte decimal es cero, y así la muestra  | `cout << showpoint`
  setw 					| fija un tamaño específico de columnas	     		 | `cout << setw(5) << x << endl `
  flush 					| permite que todos los caracteres de un buffer se <br> escriban y limpia el buffer <br> hace lo mismo que endl pero sin saltar de línea	| ` cout << "holaaaa " << flush ; `
  `setfill(<character>)`			| sustituye los espacios 	      	 	   	| `cout << setfill(#); `
@@ -65,7 +65,7 @@ else{
 }
 ```
 Primeramente se evalúa la condición, si es verdad se ejecutan las sentencias y se ignora el resto del código.
-Si la primera condicióne es false, se  evalúa la condición2, y si es verdadera se ejecutan senctencias2 y se ignora el resto.
+Si la primera condición es false, se  evalúa la condición2, y si es verdadera se ejecutan sentencias2 y se ignora el resto.
 Si tanto la condición como condición2 son falsas se ejecuta el apartado de sentencias3.
 Podéis probar a ejecutar el siguiente código:
 ```cpp
