@@ -1,0 +1,130 @@
+\hypertarget{punto_8h}{}\section{Referencia del Archivo include/punto.h}
+\label{punto_8h}\index{include/punto.\+h@{include/punto.\+h}}
+
+
+Definción de la clase {\ttfamily \hyperlink{classPunto}{Punto}}.  
+
+
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{punto_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPunto}{Punto}
+\begin{DoxyCompactList}\small\item\em Clase \hyperlink{classPunto}{Punto}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{punto_8h_a9c93fd6721d3b594dbbcfb77a92a2880}{distancia} (\hyperlink{classPunto}{Punto} p1, \hyperlink{classPunto}{Punto} p2)
+\begin{DoxyCompactList}\small\item\em Funciones auxiliares (no son métodos de la clase) \end{DoxyCompactList}\item 
+\hyperlink{classPunto}{Punto} \hyperlink{punto_8h_a119f914f219e98be4c2c93b5138e97da}{punto\+Medio} (\hyperlink{classPunto}{Punto} p1, \hyperlink{classPunto}{Punto} p2)
+\begin{DoxyCompactList}\small\item\em Calcula el punto que está entre dos puntos dados con distancia mínima a ambos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Definción de la clase {\ttfamily \hyperlink{classPunto}{Punto}}. 
+
+\begin{DoxyAuthor}{Autor}
+M\+P-\/\+D\+G\+IM -\/ Grupo A 
+\end{DoxyAuthor}
+
+
+\subsection{Documentación de las funciones}
+\index{punto.\+h@{punto.\+h}!distancia@{distancia}}
+\index{distancia@{distancia}!punto.\+h@{punto.\+h}}
+\subsubsection[{\texorpdfstring{distancia(\+Punto p1, Punto p2)}{distancia(Punto p1, Punto p2)}}]{\setlength{\rightskip}{0pt plus 5cm}double distancia (
+\begin{DoxyParamCaption}
+\item[{{\bf Punto}}]{p1, }
+\item[{{\bf Punto}}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{punto_8h_a9c93fd6721d3b594dbbcfb77a92a2880}{}\label{punto_8h_a9c93fd6721d3b594dbbcfb77a92a2880}
+
+
+Funciones auxiliares (no son métodos de la clase) 
+
+Calcula la distancia entre dos puntos 
+\begin{DoxyParams}{Parámetros}
+{\em p1} & primer punto \\
+\hline
+{\em p2} & segundo punto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la distancia entre el punto {\itshape p1} y el punto {\itshape p2} 
+\end{DoxyReturn}
+
+
+Definición en la línea 40 del archivo punto.\+cpp.
+
+
+\begin{DoxyCode}
+40                                     \{
+41     \textcolor{keywordflow}{return} sqrt((p1.\hyperlink{classPunto_aa218292fec9bad5ec6d71d4bd9173d9d}{getX}()-p2.\hyperlink{classPunto_aa218292fec9bad5ec6d71d4bd9173d9d}{getX}())*(p1.\hyperlink{classPunto_aa218292fec9bad5ec6d71d4bd9173d9d}{getX}()-p2.\hyperlink{classPunto_aa218292fec9bad5ec6d71d4bd9173d9d}{getX}()) +
+42          (p1.\hyperlink{classPunto_a214978b8bbae48ca5927f2e56fb3bd22}{getY}()-p2.\hyperlink{classPunto_a214978b8bbae48ca5927f2e56fb3bd22}{getY}())*(p1.\hyperlink{classPunto_a214978b8bbae48ca5927f2e56fb3bd22}{getY}()-p2.\hyperlink{classPunto_a214978b8bbae48ca5927f2e56fb3bd22}{getY}()));
+43 \}
+\end{DoxyCode}
+
+
+Gráfico de llamadas para esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{punto_8h_a9c93fd6721d3b594dbbcfb77a92a2880_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{punto.\+h@{punto.\+h}!punto\+Medio@{punto\+Medio}}
+\index{punto\+Medio@{punto\+Medio}!punto.\+h@{punto.\+h}}
+\subsubsection[{\texorpdfstring{punto\+Medio(\+Punto p1, Punto p2)}{puntoMedio(Punto p1, Punto p2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Punto} punto\+Medio (
+\begin{DoxyParamCaption}
+\item[{{\bf Punto}}]{p1, }
+\item[{{\bf Punto}}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{punto_8h_a119f914f219e98be4c2c93b5138e97da}{}\label{punto_8h_a119f914f219e98be4c2c93b5138e97da}
+
+
+Calcula el punto que está entre dos puntos dados con distancia mínima a ambos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p1} & primer punto \\
+\hline
+{\em p2} & segundo punto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+un punto entre el punto {\itshape p1} y el punto {\itshape p2} con distancia mínima a ambos 
+\end{DoxyReturn}
+
+
+Definición en la línea 53 del archivo punto.\+cpp.
+
+
+\begin{DoxyCode}
+53                                     \{
+54     \hyperlink{classPunto}{Punto} pMedio;
+55     pMedio.\hyperlink{classPunto_a51ae6616f828bb2b4111bc8ace49dbca}{setX}((p1.\hyperlink{classPunto_aa218292fec9bad5ec6d71d4bd9173d9d}{getX}()+p2.\hyperlink{classPunto_aa218292fec9bad5ec6d71d4bd9173d9d}{getX}())/2.0);
+56     pMedio.\hyperlink{classPunto_a6a0f8adb5946f31a7867a06f54d97462}{setY}((p1.\hyperlink{classPunto_a214978b8bbae48ca5927f2e56fb3bd22}{getY}()+p2.\hyperlink{classPunto_a214978b8bbae48ca5927f2e56fb3bd22}{getY}())/2.0);
+57     \textcolor{keywordflow}{return} pMedio;
+58 \}
+\end{DoxyCode}
+
+
+Gráfico de llamadas para esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{punto_8h_a119f914f219e98be4c2c93b5138e97da_cgraph}
+\end{center}
+\end{figure}
+
+

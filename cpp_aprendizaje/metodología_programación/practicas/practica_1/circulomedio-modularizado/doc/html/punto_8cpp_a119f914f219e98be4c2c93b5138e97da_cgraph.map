@@ -1,0 +1,10 @@
+<map id="puntoMedio" name="puntoMedio">
+<area shape="rect" id="node2" href="$classPunto.html#a51ae6616f828bb2b4111bc8ace49dbca" title="Asigna el valor nuevoX a la coordenada x del punto. " alt="" coords="436,12,527,39"/>
+<area shape="rect" id="node3" href="$classPunto.html#aa218292fec9bad5ec6d71d4bd9173d9d" title="Devuelve la coordenada x del punto. " alt="" coords="436,164,527,191"/>
+<area shape="rect" id="node4" href="$classPunto.html#a6a0f8adb5946f31a7867a06f54d97462" title="Asigna el valor nuevoY a la coordenada y del punto. " alt="" coords="436,266,527,292"/>
+<area shape="rect" id="node5" href="$classPunto.html#a214978b8bbae48ca5927f2e56fb3bd22" title="Devuelve la coordenada y del punto. " alt="" coords="143,164,233,191"/>
+<area shape="rect" id="node6" href="$classPunto.html#afc543b48134f632fa354d8b027954e80" title="Escribe un punto en formato (x,y) " alt="" coords="281,114,388,140"/>
+<area shape="rect" id="node7" href="$classPunto.html#a84cc9b0ee2e5b00842e7bff819b80459" title="// Lee un punto en el formato (x,y) " alt="" coords="292,215,377,242"/>
+<area shape="rect" id="node8" href="$punto_8h.html#a9c93fd6721d3b594dbbcfb77a92a2880" title="Funciones auxiliares (no son métodos de la clase) " alt="" coords="297,164,372,191"/>
+<area shape="rect" id="node9" href="$punto_8h.html#a119f914f219e98be4c2c93b5138e97da" title="Calcula el punto que está entre dos puntos dados con distancia mínima a ambos. " alt="" coords="290,63,379,90"/>
+</map>

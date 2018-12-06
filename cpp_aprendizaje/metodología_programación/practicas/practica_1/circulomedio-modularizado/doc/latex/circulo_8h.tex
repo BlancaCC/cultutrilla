@@ -1,0 +1,150 @@
+\hypertarget{circulo_8h}{}\section{Referencia del Archivo include/circulo.h}
+\label{circulo_8h}\index{include/circulo.\+h@{include/circulo.\+h}}
+
+
+Definición de la clase {\ttfamily \hyperlink{classCirculo}{Circulo}}.  
+
+
+{\ttfamily \#include \char`\"{}punto.\+h\char`\"{}}\\*
+Dependencia gráfica adjunta para circulo.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{circulo_8h__incl}
+\end{center}
+\end{figure}
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{circulo_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCirculo}{Circulo}
+\end{DoxyCompactItemize}
+\subsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{circulo_8h_a2be093c30676e02d6f76b6a56c713b34}{distancia} (\hyperlink{classCirculo}{Circulo} c1, \hyperlink{classCirculo}{Circulo} c2)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia entre dos circulos. \end{DoxyCompactList}\item 
+bool \hyperlink{circulo_8h_a6e60e1271c0a8f48e87f8e53b434dfd4}{interior} (\hyperlink{classPunto}{Punto} p, \hyperlink{classCirculo}{Circulo} c)
+\begin{DoxyCompactList}\small\item\em Comprueba si un punto es interior a un círculo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+Definición de la clase {\ttfamily \hyperlink{classCirculo}{Circulo}}. 
+
+\begin{DoxyAuthor}{Autor}
+M\+P-\/\+D\+G\+IM -\/ Grupo A 
+\end{DoxyAuthor}
+
+
+\subsection{Documentación de las funciones}
+\index{circulo.\+h@{circulo.\+h}!distancia@{distancia}}
+\index{distancia@{distancia}!circulo.\+h@{circulo.\+h}}
+\subsubsection[{\texorpdfstring{distancia(\+Circulo c1, Circulo c2)}{distancia(Circulo c1, Circulo c2)}}]{\setlength{\rightskip}{0pt plus 5cm}double distancia (
+\begin{DoxyParamCaption}
+\item[{{\bf Circulo}}]{c1, }
+\item[{{\bf Circulo}}]{c2}
+\end{DoxyParamCaption}
+)}\hypertarget{circulo_8h_a2be093c30676e02d6f76b6a56c713b34}{}\label{circulo_8h_a2be093c30676e02d6f76b6a56c713b34}
+
+
+Calcula la distancia entre dos circulos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em c1} & primer círculo \\
+\hline
+{\em c2} & segundo círculo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la distancia entre el círculo {\itshape c1} y el círculo {\itshape c2} 
+\end{DoxyReturn}
+La distancia entre dos círculos se define como la distancia entre los centros menos los dos radios. Nótese que la distancia puede ser negativa si los círculos se intersecan 
+
+Definición en la línea 65 del archivo circulo.\+cpp.
+
+
+\begin{DoxyCode}
+65                                          \{
+66     \hyperlink{classPunto}{Punto} centro1, centro2;
+67     \textcolor{keywordtype}{double} dist;
+68 
+69     centro1=c1.\hyperlink{classCirculo_a022cde4d10d14a47a3b3921f80909f3b}{getCentro}();
+70     centro2=c2.\hyperlink{classCirculo_a022cde4d10d14a47a3b3921f80909f3b}{getCentro}();
+71     dist=\hyperlink{circulo_8cpp_a2be093c30676e02d6f76b6a56c713b34}{distancia}(centro1,centro2)-c1.\hyperlink{classCirculo_a982f8a785d8a68ab1483b609cd752980}{getRadio}()-c2.\hyperlink{classCirculo_a982f8a785d8a68ab1483b609cd752980}{getRadio}();
+72     \textcolor{keywordflow}{return} dist;
+73 \}
+\end{DoxyCode}
+
+
+Gráfico de llamadas para esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{circulo_8h_a2be093c30676e02d6f76b6a56c713b34_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{circulo.\+h@{circulo.\+h}!interior@{interior}}
+\index{interior@{interior}!circulo.\+h@{circulo.\+h}}
+\subsubsection[{\texorpdfstring{interior(\+Punto p, Circulo c)}{interior(Punto p, Circulo c)}}]{\setlength{\rightskip}{0pt plus 5cm}bool interior (
+\begin{DoxyParamCaption}
+\item[{{\bf Punto}}]{p, }
+\item[{{\bf Circulo}}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{circulo_8h_a6e60e1271c0a8f48e87f8e53b434dfd4}{}\label{circulo_8h_a6e60e1271c0a8f48e87f8e53b434dfd4}
+
+
+Comprueba si un punto es interior a un círculo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & punto a comprobar \\
+\hline
+{\em c} & circulo \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valores devueltos}
+{\em true} & si el punto {\itshape p} es interior al círculo {\itshape c} \\
+\hline
+{\em false} & en caso contrario \\
+\hline
+\end{DoxyRetVals}
+
+
+Definición en la línea 83 del archivo circulo.\+cpp.
+
+
+\begin{DoxyCode}
+83                                   \{
+84     \textcolor{keywordflow}{if}(\hyperlink{circulo_8cpp_a2be093c30676e02d6f76b6a56c713b34}{distancia}(p,c.\hyperlink{classCirculo_a022cde4d10d14a47a3b3921f80909f3b}{getCentro}())<=c.\hyperlink{classCirculo_a982f8a785d8a68ab1483b609cd752980}{getRadio}()) \{
+85         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+86     \}
+87     \textcolor{keywordflow}{else}\{
+88         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+89     \}
+90 \}
+\end{DoxyCode}
+
+
+Gráfico de llamadas para esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{circulo_8h_a6e60e1271c0a8f48e87f8e53b434dfd4_cgraph}
+\end{center}
+\end{figure}
+
+

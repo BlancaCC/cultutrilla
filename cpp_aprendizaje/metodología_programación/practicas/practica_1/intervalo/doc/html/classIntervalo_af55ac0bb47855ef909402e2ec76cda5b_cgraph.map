@@ -1,0 +1,8 @@
+<map id="Intervalo::estaDentro" name="Intervalo::estaDentro">
+<area shape="rect" id="node2" href="$classIntervalo.html#ab53adad27de8ec98cf8f4280bd3a7df9" title="Consulta si el intervalo almacenado es vacío o no. " alt="" coords="217,5,344,32"/>
+<area shape="rect" id="node3" href="$classIntervalo.html#af972bcc502e3a7a6580a3fab83e43134" title="Consulta si el intervalo es cerrado en su cota inferior. " alt="" coords="201,56,360,83"/>
+<area shape="rect" id="node4" href="$classIntervalo.html#af8170b68c6d6a63192db6685b90f782f" title="Devuelve la cota inferior del intervalo. " alt="" coords="210,107,351,133"/>
+<area shape="rect" id="node5" href="$classIntervalo.html#a7f8ff94ce16f90a81a3c55f36044893b" title="Devuelve la cota superior del intervalo. " alt="" coords="206,157,355,184"/>
+<area shape="rect" id="node6" href="$classIntervalo.html#af304bde2c8fc65e3a03324cd80f15f77" title="Consulta si el intervalo es cerrado en su cota superior. " alt="" coords="197,208,364,235"/>
+<area shape="rect" id="node7" href="$classIntervalo.html#a3e7cfa7c148a4e60be7040fecf506313" title="Define los valores del intervalo. " alt="" coords="207,259,355,285"/>
+</map>

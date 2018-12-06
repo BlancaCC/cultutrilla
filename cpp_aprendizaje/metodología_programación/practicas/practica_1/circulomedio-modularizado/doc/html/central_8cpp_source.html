@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Círculo medio: Fichero Fuente src/central.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Círculo medio
+   &#160;<span id="projectnumber">0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">central.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="central_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="punto_8h.html">punto.h</a>&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="circulo_8h.html">circulo.h</a>&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">int</span> main()</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classCirculo.html">Circulo</a> c1,c2;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Introduzca un circulo en formato radio-(x,y): &quot;</span>;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    c1.<a class="code" href="classCirculo.html#aa71efffb3b42eeaefd43743a8d34aa74">leer</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    c1.<a class="code" href="classCirculo.html#a2deaed49ea394702beb0554f9480137e">escribir</a>();</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Introduzca otro circulo: &quot;</span>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    c2.<a class="code" href="classCirculo.html#aa71efffb3b42eeaefd43743a8d34aa74">leer</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    c2.<a class="code" href="classCirculo.html#a2deaed49ea394702beb0554f9480137e">escribir</a>();  </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classCirculo.html">Circulo</a> res;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    res.<a class="code" href="classCirculo.html#aa24cc4b316a3d9ece35f120d9b8e1fc4">set</a>(<a class="code" href="punto_8h.html#a119f914f219e98be4c2c93b5138e97da">puntoMedio</a>(c1.<a class="code" href="classCirculo.html#a022cde4d10d14a47a3b3921f80909f3b">getCentro</a>(),c2.<a class="code" href="classCirculo.html#a022cde4d10d14a47a3b3921f80909f3b">getCentro</a>()),</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                     <a class="code" href="circulo_8h.html#a2be093c30676e02d6f76b6a56c713b34">distancia</a>(c1.<a class="code" href="classCirculo.html#a022cde4d10d14a47a3b3921f80909f3b">getCentro</a>(),c2.<a class="code" href="classCirculo.html#a022cde4d10d14a47a3b3921f80909f3b">getCentro</a>())/2);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;La distancia entre los círculos es: &quot;</span> &lt;&lt; <a class="code" href="circulo_8h.html#a2be093c30676e02d6f76b6a56c713b34">distancia</a>(c1,c2) &lt;&lt; <span class="stringliteral">&quot; y el círculo que pasa por los dos centros es: &quot;</span>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    res.<a class="code" href="classCirculo.html#a2deaed49ea394702beb0554f9480137e">escribir</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    cout &lt;&lt; endl;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="ttc" id="circulo_8h_html_a2be093c30676e02d6f76b6a56c713b34"><div class="ttname"><a href="circulo_8h.html#a2be093c30676e02d6f76b6a56c713b34">distancia</a></div><div class="ttdeci">double distancia(Circulo c1, Circulo c2)</div><div class="ttdoc">Calcula la distancia entre dos circulos. </div><div class="ttdef"><b>Definition:</b> <a href="circulo_8cpp_source.html#l00065">circulo.cpp:65</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="classCirculo_html_aa24cc4b316a3d9ece35f120d9b8e1fc4"><div class="ttname"><a href="classCirculo.html#aa24cc4b316a3d9ece35f120d9b8e1fc4">Circulo::set</a></div><div class="ttdeci">void set(Punto centro, double radio)</div><div class="ttdoc">Asigna el centro y el radio a un circulo. </div><div class="ttdef"><b>Definition:</b> <a href="circulo_8cpp_source.html#l00024">circulo.cpp:24</a></div></div>
+<div class="ttc" id="classCirculo_html_a2deaed49ea394702beb0554f9480137e"><div class="ttname"><a href="classCirculo.html#a2deaed49ea394702beb0554f9480137e">Circulo::escribir</a></div><div class="ttdeci">void escribir() const </div><div class="ttdoc">Escribe círculo en formato radio-centro. </div><div class="ttdef"><b>Definition:</b> <a href="circulo_8cpp_source.html#l00037">circulo.cpp:37</a></div></div>
+<div class="ttc" id="punto_8h_html_a119f914f219e98be4c2c93b5138e97da"><div class="ttname"><a href="punto_8h.html#a119f914f219e98be4c2c93b5138e97da">puntoMedio</a></div><div class="ttdeci">Punto puntoMedio(Punto p1, Punto p2)</div><div class="ttdoc">Calcula el punto que está entre dos puntos dados con distancia mínima a ambos. </div><div class="ttdef"><b>Definition:</b> <a href="punto_8cpp_source.html#l00053">punto.cpp:53</a></div></div>
+<div class="ttc" id="classCirculo_html"><div class="ttname"><a href="classCirculo.html">Circulo</a></div><div class="ttdef"><b>Definition:</b> <a href="circulo_8h_source.html#l00011">circulo.h:11</a></div></div>
+<div class="ttc" id="classCirculo_html_a022cde4d10d14a47a3b3921f80909f3b"><div class="ttname"><a href="classCirculo.html#a022cde4d10d14a47a3b3921f80909f3b">Circulo::getCentro</a></div><div class="ttdeci">Punto getCentro() const </div><div class="ttdoc">Devuelve el centro de un circulo. </div><div class="ttdef"><b>Definition:</b> <a href="circulo_8cpp_source.html#l00029">circulo.cpp:29</a></div></div>
+<div class="ttc" id="punto_8h_html"><div class="ttname"><a href="punto_8h.html">punto.h</a></div><div class="ttdoc">Definción de la clase Punto. </div></div>
+<div class="ttc" id="classCirculo_html_aa71efffb3b42eeaefd43743a8d34aa74"><div class="ttname"><a href="classCirculo.html#aa71efffb3b42eeaefd43743a8d34aa74">Circulo::leer</a></div><div class="ttdeci">void leer()</div><div class="ttdoc">lee círculo en formato radio-centro </div><div class="ttdef"><b>Definition:</b> <a href="circulo_8cpp_source.html#l00042">circulo.cpp:42</a></div></div>
+<div class="ttc" id="circulo_8h_html"><div class="ttname"><a href="circulo_8h.html">circulo.h</a></div><div class="ttdoc">Definición de la clase Circulo. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
