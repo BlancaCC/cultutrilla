@@ -1,0 +1,39 @@
+\begin{theindex}
+
+  \item {dentro\+Cota\+Inf}
+    \subitem {Intervalo}, \hyperpage{4}
+  \item {dentro\+Cota\+Sup}
+    \subitem {Intervalo}, \hyperpage{5}
+
+  \indexspace
+
+  \item {es\+Vacio}
+    \subitem {Intervalo}, \hyperpage{5}
+  \item {esta\+Dentro}
+    \subitem {Intervalo}, \hyperpage{5}
+
+  \indexspace
+
+  \item {get\+Cota\+Inf}
+    \subitem {Intervalo}, \hyperpage{6}
+  \item {get\+Cota\+Sup}
+    \subitem {Intervalo}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Intervalo}, \hyperpage{3}
+    \subitem {dentro\+Cota\+Inf}, \hyperpage{4}
+    \subitem {dentro\+Cota\+Sup}, \hyperpage{5}
+    \subitem {es\+Vacio}, \hyperpage{5}
+    \subitem {esta\+Dentro}, \hyperpage{5}
+    \subitem {get\+Cota\+Inf}, \hyperpage{6}
+    \subitem {get\+Cota\+Sup}, \hyperpage{6}
+    \subitem {Intervalo}, \hyperpage{3, 4}
+    \subitem {set\+Intervalo}, \hyperpage{6}
+
+  \indexspace
+
+  \item {set\+Intervalo}
+    \subitem {Intervalo}, \hyperpage{6}
+
+\end{theindex}

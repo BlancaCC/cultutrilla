@@ -3,101 +3,101 @@
 
 ### C++ ###
 # Prerequisites
-*.d
+#*.d
 
 # Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#*.slo
+#*.lo
+#*.o
+#*.obj
 
 # Precompiled Headers
-*.gch
-*.pch
+#*.gch
+#*.pch
 
 # Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+#*.so
+#*.dylib
+#*.dll
 
 # Fortran module files
-*.mod
-*.smod
+#*.mod
+#*.smod
 
 # Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+#*.lai
+#*.la
+#*.a
+#*.lib
 
 # Executables
-*.exe
-*.out
-*.app
+#*.exe
+#*.out
+#*.app
 
 ### Haskell ###
 dist
-dist-*
+dist-#*
 cabal-dev
-*.hi
-*.chi
-*.chs.h
-*.dyn_o
-*.dyn_hi
+#*.hi
+#*.chi
+#*.chs.h
+#*.dyn_o
+#*.dyn_hi
 .hpc
 .hsenv
 .cabal-sandbox/
 cabal.sandbox.config
-*.prof
-*.aux
-*.hp
-*.eventlog
+#*.prof
+#*.aux
+#*.hp
+#*.eventlog
 .stack-work/
 cabal.project.local
 cabal.project.local~
 .HTF/
-.ghc.environment.*
+.ghc.environment.#*
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
-*.lof
-*.log
-*.lot
-*.fls
-*.toc
-*.fmt
-*.fot
-*.cb
-*.cb2
-.*.lb
+#*.lof
+#*.log
+#*.lot
+#*.fls
+#*.toc
+#*.fmt
+#*.fot
+#*.cb
+#*.cb2
+.#*.lb
 
 ## Intermediate documents:
-*.dvi
-*.xdv
-*-converted-to.*
+#*.dvi
+#*.xdv
+#*-converted-to.#*
 # these rules might exclude image files for figures etc.
-# *.ps
-# *.eps
-# *.pdf
+# #*.ps
+# #*.eps
+# #*.pdf
 
 ## Generated if empty string is given at "Please type another file name for output:"
-.pdf
+#.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
-*.bbl
-*.bcf
-*.blg
-*-blx.aux
-*-blx.bib
-*.run.xml
+#*.bbl
+#*.bcf
+#*.blg
+#*-blx.aux
+#*-blx.bib
+#*.run.xml
 
 ## Build tool auxiliary files:
-*.fdb_latexmk
-*.synctex
-*.synctex(busy)
-*.synctex.gz
-*.synctex.gz(busy)
-*.pdfsync
+#*.fdb_latexmk
+#*.synctex
+#*.synctex(busy)
+#*.synctex.gz
+#*.synctex.gz(busy)
+#*.pdfsync
 
 ## Build tool directories for auxiliary files
 # latexrun
@@ -105,223 +105,223 @@ latex.out/
 
 ## Auxiliary and intermediate files from other packages:
 # algorithms
-*.alg
-*.loa
+#*.alg
+#*.loa
 
 # achemso
-acs-*.bib
+acs-#*.bib
 
 # amsthm
-*.thm
+#*.thm
 
 # beamer
-*.nav
-*.pre
-*.snm
-*.vrb
+#*.nav
+#*.pre
+#*.snm
+#*.vrb
 
 # changes
-*.soc
+#*.soc
 
 # comment
-*.cut
+#*.cut
 
 # cprotect
-*.cpt
+#*.cpt
 
 # elsarticle (documentclass of Elsevier journals)
-*.spl
+#*.spl
 
 # endnotes
-*.ent
+#*.ent
 
 # fixme
-*.lox
+#*.lox
 
 # feynmf/feynmp
-*.mf
-*.mp
-*.t[1-9]
-*.t[1-9][0-9]
-*.tfm
+#*.mf
+#*.mp
+#*.t[1-9]
+#*.t[1-9][0-9]
+#*.tfm
 
 #(r)(e)ledmac/(r)(e)ledpar
-*.end
-*.?end
-*.[1-9]
-*.[1-9][0-9]
-*.[1-9][0-9][0-9]
-*.[1-9]R
-*.[1-9][0-9]R
-*.[1-9][0-9][0-9]R
-*.eledsec[1-9]
-*.eledsec[1-9]R
-*.eledsec[1-9][0-9]
-*.eledsec[1-9][0-9]R
-*.eledsec[1-9][0-9][0-9]
-*.eledsec[1-9][0-9][0-9]R
+#*.end
+#*.?end
+#*.[1-9]
+#*.[1-9][0-9]
+#*.[1-9][0-9][0-9]
+#*.[1-9]R
+#*.[1-9][0-9]R
+#*.[1-9][0-9][0-9]R
+#*.eledsec[1-9]
+#*.eledsec[1-9]R
+#*.eledsec[1-9][0-9]
+#*.eledsec[1-9][0-9]R
+#*.eledsec[1-9][0-9][0-9]
+#*.eledsec[1-9][0-9][0-9]R
 
 # glossaries
-*.acn
-*.acr
-*.glg
-*.glo
-*.gls
-*.glsdefs
+#*.acn
+#*.acr
+#*.glg
+#*.glo
+#*.gls
+#*.glsdefs
 
 # gnuplottex
-*-gnuplottex-*
+#*-gnuplottex-#*
 
 # gregoriotex
-*.gaux
-*.gtex
+#*.gaux
+#*.gtex
 
 # htlatex
-*.4ct
-*.4tc
-*.idv
-*.lg
-*.trc
-*.xref
+#*.4ct
+#*.4tc
+#*.idv
+#*.lg
+#*.trc
+#*.xref
 
 # hyperref
-*.brf
+#*.brf
 
 # knitr
-*-concordance.tex
+#*-concordance.tex
 # TODO Comment the next line if you want to keep your tikz graphics files
-*.tikz
-*-tikzDictionary
+#*.tikz
+#*-tikzDictionary
 
 # listings
-*.lol
+#*.lol
 
 # makeidx
-*.idx
-*.ilg
-*.ind
-*.ist
+#*.idx
+#*.ilg
+#*.ind
+#*.ist
 
 # minitoc
-*.maf
-*.mlf
-*.mlt
-*.mtc[0-9]*
-*.slf[0-9]*
-*.slt[0-9]*
-*.stc[0-9]*
+#*.maf
+#*.mlf
+#*.mlt
+#*.mtc[0-9]#*
+#*.slf[0-9]#*
+#*.slt[0-9]#*
+#*.stc[0-9]#*
 
 # minted
-_minted*
-*.pyg
+_minted#*
+#*.pyg
 
 # morewrites
-*.mw
+#*.mw
 
 # nomencl
-*.nlg
-*.nlo
-*.nls
+#*.nlg
+#*.nlo
+#*.nls
 
 # pax
-*.pax
+#*.pax
 
 # pdfpcnotes
-*.pdfpc
+#*.pdfpc
 
 # sagetex
-*.sagetex.sage
-*.sagetex.py
-*.sagetex.scmd
+#*.sagetex.sage
+#*.sagetex.py
+#*.sagetex.scmd
 
 # scrwfile
-*.wrt
+#*.wrt
 
 # sympy
-*.sout
-*.sympy
-sympy-plots-for-*.tex/
+#*.sout
+#*.sympy
+sympy-plots-for-#*.tex/
 
 # pdfcomment
-*.upa
-*.upb
+#*.upa
+#*.upb
 
 # pythontex
-*.pytxcode
-pythontex-files-*/
+#*.pytxcode
+pythontex-files-#*/
 
 # tcolorbox
-*.listing
+#*.listing
 
 # thmtools
-*.loe
+#*.loe
 
 # TikZ & PGF
-*.dpth
-*.md5
-*.auxlock
+#*.dpth
+#*.md5
+#*.auxlock
 
 # todonotes
-*.tdo
+#*.tdo
 
 # easy-todo
-*.lod
+#*.lod
 
 # xcolor
-*.xcp
+#*.xcp
 
 # xmpincl
-*.xmpi
+#*.xmpi
 
 # xindy
-*.xdy
+#*.xdy
 
 # xypic precompiled matrices
-*.xyc
+#*.xyc
 
 # endfloat
-*.ttt
-*.fff
+#*.ttt
+#*.fff
 
 # Latexian
-TSWLatexianTemp*
+TSWLatexianTemp#*
 
 ## Editors:
 # WinEdt
-*.bak
-*.sav
+#*.bak
+#*.sav
 
 # Texpad
 .texpadtmp
 
 # LyX
-*.lyx~
+#*.lyx~
 
 # Kile
-*.backup
+#*.backup
 
 # KBibTeX
-*~[0-9]*
+#*~[0-9]#*
 
 # auto folder when using emacs and auctex
-./auto/*
-*.el
+./auto/#*
+#*.el
 
 # expex forward references with \gathertags
-*-tags.tex
+#*-tags.tex
 
 # standalone packages
-*.sta
+#*.sta
 
 ### LaTeX Patch ###
 # glossaries
-*.glstex
+#*.glstex
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-*$py.class
+#*.py[cod]
+#*$py.class
 
 # C extensions
 
@@ -339,16 +339,16 @@ parts/
 sdist/
 var/
 wheels/
-*.egg-info/
+#*.egg-info/
 .installed.cfg
-*.egg
+#*.egg
 MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+#*.manifest
+#*.spec
 
 # Installer logs
 pip-log.txt
@@ -359,17 +359,17 @@ htmlcov/
 .tox/
 .nox/
 .coverage
-.coverage.*
+.coverage.#*
 .cache
 nosetests.xml
 coverage.xml
-*.cover
+#*.cover
 .hypothesis/
 .pytest_cache/
 
 # Translations
-*.mo
-*.pot
+#*.mo
+#*.pot
 
 # Django stuff:
 local_settings.py
@@ -402,7 +402,7 @@ ipython_config.py
 celerybeat-schedule
 
 # SageMath parsed files
-*.sage.py
+#*.sage.py
 
 # Environments
 .env
