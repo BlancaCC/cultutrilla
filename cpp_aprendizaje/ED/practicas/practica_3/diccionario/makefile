@@ -1,14 +1,20 @@
-SRC=usodiccionario
+MAIN=usodiccionario
+INCLUDE=./include/
+FLAGS=-g -I$(INCLUDE)
+DATA=./data/
+BIN=./bin/
+SRC=./src/
 
-$(SRC).out: $(SRC).cpp diccionario.h
-	g++ -g -o $@ $(SRC).cpp
+$(BIN)$(MAIN).out:  $(SRC)$(MAIN).cpp $(INCLUDE)diccionario.h $(SRC)diccionario.cpp
+	g++ $(FLAGS) -o $@ $(SRC)$(MAIN).cpp
 
 clear:
-	rm *~ *.out
+	rm $(BIN)*
 
 valgrind:
-	valgrind --leak-check=yes ./$(SRC).out < data.txt
+	valgrind --leak-check=yes $(BIN)$(MAIN).out < data.txt
 test:
-	./$(SRC).out < data.txt
+	$(BIN)$(MAIN).out < $(DATA)data.txt
+
 
 
