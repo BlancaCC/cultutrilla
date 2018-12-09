@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "diccionario.h"
 
 
@@ -117,9 +118,11 @@ void EscribeSigni(const list<string>&l)
 */
 int main(int argc , char * argv[])
 {
-  Diccionario<string,string> D;
+  Diccionario<string,string> D, D2;
   
   cin>>D;
+  cin >> D2;
+  D.addDiccionario(D2);
   //imprime2(D);
   cout<<D;
   cout << "El número de elementos de nuestra precioso diccionario es "

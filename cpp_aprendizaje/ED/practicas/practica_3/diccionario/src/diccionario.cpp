@@ -219,3 +219,38 @@ bool Diccionario<T,U>::removeUntil( const T & c_inicial, const T & c_final  )
       return false;
     }
 }
+
+// ~~~~~~~~ fin remove until
+
+
+template<class T, class U >
+void Diccionario<T,U>::addDiccionario( const Diccionario<T,U> & D )
+{
+  //recorremos el diccionario sobre el que se quieren añadir los termnminos
+
+  typename list<data<T,U>>::iterator it, itc;
+  typename list<U>::iterator it_info; 
+  for(it= D.datos.begin(); it != D.datos.end(); it++)
+    {
+      //si la clave ya se encuentra en el diccionario
+      //actualizamos su contenido 
+      if( Esta_Clave( (*it).clave, itc ) )
+	{
+	  for( it_info = (*it).info_asoci.begin();  it_info != (*it).info_asoci.end(); it_info++ )
+	    {
+	      if( !binary_search( (*itc).info_asoci.begin(), (*itc).info_asoci.end(),  (*it_info) ) )
+		{
+		  //si no se ha encontrado añadimos tal contenido
+		  (*itc).info_asoci.insert( (*itc).info_asoci.end(), (*it_info) ); 
+		  
+		} //if
+	
+	    }
+	}
+      else
+	{
+	  //si no está la clave la insetamos donde debería estar
+	  datos.insert( itc, (*it) );
+	}
+    }
+}
