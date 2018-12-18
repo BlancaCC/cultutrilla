@@ -152,7 +152,7 @@ Para comprobar la consistencia del sistema de archivos usaremos `fsck`
 
 ## Modifica el archivo para que loop0 y loop1 se monten automáticamente nuestros dos SA
 
-Para ello he añadido al final del archivo /dev/fstab las siguientes ĺíneas
+Para ello he añadido al final del archivo /etc/fstab las siguientes ĺíneas
 
 ```
 loop0                                           /dev/loop0      auto    defaults        0 0
